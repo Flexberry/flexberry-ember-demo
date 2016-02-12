@@ -25,6 +25,7 @@ Model.defineProjection('SuggestionTypeE', 'flexberry-ember-demo-suggestion-type'
     })
   })
 });
+
 Model.defineProjection('SuggestionTypeL', 'flexberry-ember-demo-suggestion-type', {
   name: Proj.attr('Name'),
   moderated: Proj.attr('Moderated'),
