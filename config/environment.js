@@ -14,16 +14,12 @@ module.exports = function(environment) {
     },
 
     APP: {
-      backEndUrl: 'http://flexberry-ember-demo.azurewebsites.net/odata/'
+      backendUrl: 'http://flexberry-ember-demo.azurewebsites.net/odata'
     }
   };
 
   if (environment === 'development') {
-    // ENV.APP.LOG_RESOLVER = true;
-    // ENV.APP.LOG_ACTIVE_GENERATION = true;
-    // ENV.APP.LOG_TRANSITIONS = true;
-    // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
-    // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    ENV.APP.backendUrl = 'http://localhost:7176/odata';
   }
 
   if (environment === 'test') {
