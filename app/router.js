@@ -9,8 +9,10 @@ Router.map(function() {
   this.route('suggestionTypes', function() {
     this.route('page', {path: 'page/:page'});
   });
-
   this.route('suggestions', function() {
+    this.route('page', {path: 'page/:page'});
+  });
+  this.route('users', function() {
     this.route('page', {path: 'page/:page'});
   });
 });
