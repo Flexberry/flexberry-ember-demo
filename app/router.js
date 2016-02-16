@@ -9,6 +9,7 @@ Router.map(function() {
   this.route('suggestionTypes', function() {
     this.route('page', {path: 'page/:page'});
   });
+  this.route('addSuggestion');
 });
 
 export default Router;

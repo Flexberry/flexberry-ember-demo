@@ -9,7 +9,10 @@
     "semantic-ui-daterangepicker": "5d46ed2e6e5a0bf398bb6a5df82e06036dfc46be",
     "blueimp-file-upload": "9.11.2",
     "jquery-file-download": "1.4.4",
-    "semantic-ui": "^2.1.8"
+    "semantic-ui": "^2.1.8",
+    "pretender": "~0.10.1",
+    "lodash": "~3.7.0",
+    "Faker": "~3.0.0"
   },
   "resolutions": {
     "ember": "2.3.0"

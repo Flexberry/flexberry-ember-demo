@@ -19,7 +19,7 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
-    ENV.APP.backendUrl = 'http://localhost:7176/odata';
+//     ENV.APP.backendUrl = 'http://localhost:7176/odata';
   }
 
   if (environment === 'test') {
