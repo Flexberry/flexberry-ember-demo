@@ -15,6 +15,7 @@ Router.map(function() {
   this.route('users', function() {
     this.route('page', {path: 'page/:page'});
   });
+  this.route('addSuggestion');
 });
 
 export default Router;
