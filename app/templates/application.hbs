@@ -1,3 +1,12 @@
-<h2 id="title">Flexberry Ember Demo</h2>
-
-{{outlet}}
+<div class="ui grid page menu">
+    <a class="brand item" href="#">Flexberry Ember Demo</a>
+</div>
+<div class="ui grid page">
+    <div class="four wide column">
+      {{render "sitemap" sitemap}}
+    </div>
+    <div class="twelve wide column">
+      {{outlet}}
+      {{outlet 'modal'}}
+    </div>
+</div>
