@@ -1,0 +1,42 @@
+<h2>Оформите Ваше предложение</h2>
+<form class="ui form" role="form">
+
+  <div class="ui grid {{if model.errors.firstName 'error' ''}}">
+    <div class="ui two wide column right aligned middle aligned content">
+        <label>Адрес:</label>
+    </div>
+    <div class="ten wide column">
+        <span style="color:red">{{model.errors.firstName}}</span>
+        {{input type="text" placeholder="(no value)" required=true value=flexberry-ember-demo-suggestion.Address}}
+    </div>
+  </div>
+
+  <div class="ui grid {{if model.errors.firstName 'error' ''}}">
+    <div class="ui two wide column right aligned middle aligned content">
+        <label>Описание:</label>
+    </div>
+    <div class="ten wide column">
+        <span style="color:red">{{model.errors.firstName}}</span>
+        {{input type="text" placeholder="(no value)" required=true value=flexberry-ember-demo-suggestion.Text}}
+    </div>
+  </div>
+  
+    <div class="ten wide column">
+        
+    <div class="ui grid {{if model.errors.suggestion 'error' ''}}">
+            <div class="ui two wide column right aligned middle aligned content">
+                <label>Выберите тип предложения:я</label>
+            </div>
+            <div class="ten wide column">
+            </div>
+    </div>
+</div>
+  
+    <button type="submit" class="ui primary button" {{action 'save'}}>Сохранить</button>
+
+</form>
+
+
+
+
+

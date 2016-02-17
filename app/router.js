@@ -11,14 +11,11 @@ Router.map(function() {
   });
   this.route('suggestions', function() {
     this.route('page', {path: 'page/:page'});
+    this.route('new');
   });
   this.route('users', function() {
     this.route('page', {path: 'page/:page'});
   });
-  this.route('suggestion', {path: '/suggestion'}, function() {
-    this.route('addSuggestion');
-  });
-  this.route('addSuggestion');
 });
 
 export default Router;

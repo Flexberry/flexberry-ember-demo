@@ -25,7 +25,7 @@ export default Ember.Controller.extend({
         ]
       },
       {
-        link: 'addSuggestion',
+        link: 'suggestions.new',
         title: 'Добавить предложение',
         children: null
       }

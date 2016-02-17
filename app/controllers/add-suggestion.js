@@ -4,7 +4,7 @@ export default Ember.Controller.extend({
   actions: {
     save(model) {
       store.createRecord('flexberry-ember-demo-suggestion', {
-        address: ...',
+        address: '...',
         body: 'Lorem ipsum'
         });
       alert('save '+model);
