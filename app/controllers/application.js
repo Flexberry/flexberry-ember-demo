@@ -23,7 +23,13 @@ export default Ember.Controller.extend({
             children: null
           }
         ]
+      },
+      {
+        link: 'addSuggestion',
+        title: 'Добавить предложение',
+        children: null
       }
+      
     ]
   }
 });

@@ -1,15 +1,27 @@
 <h2>Оформите Ваше предложение</h2>
-<form >
-<div class="ember-view flexberry-textbox ui input fluid">Адрес: 
-    {{input name='Addr'}}
-</div>
-<div class="ember-view flexberry-textbox ui input fluid">Описание: 
-    {{input name='Text'}}
-</div>
-<button  type='submit' >Сохранить</button>
+<form class="ui form" role="form">
+
+  <div class="ui grid {{if model.errors.firstName 'error' ''}}">
+    <div class="ui two wide column right aligned middle aligned content">
+        <label>Адрес:</label>
+    </div>
+    <div class="ten wide column">
+        <span style="color:red">{{model.errors.firstName}}</span>
+        {{input type="text" placeholder="(no value)" required=true value=model.Address}}
+    </div>
+  </div>
+
+  <div class="ui grid {{if model.errors.firstName 'error' ''}}">
+    <div class="ui two wide column right aligned middle aligned content">
+        <label>Описание:</label>
+    </div>
+    <div class="ten wide column">
+        <span style="color:red">{{model.errors.firstName}}</span>
+        {{input type="text" placeholder="(no value)" required=true value=model.Text}}
+    </div>
+  </div>
+  
+    <button type="submit" class="ui primary button" {{action 'save'}}>Сохранить</button>
+
 </form>
 
-
-{{#each model as |suggestion|}}
-{{suggestion.name}}
-{{/each}}

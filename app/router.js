@@ -15,6 +15,9 @@ Router.map(function() {
   this.route('users', function() {
     this.route('page', {path: 'page/:page'});
   });
+  this.route('suggestion', {path: '/suggestion'}, function() {
+    this.route('addSuggestion');
+  });
   this.route('addSuggestion');
 });
 

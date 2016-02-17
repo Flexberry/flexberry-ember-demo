@@ -3,14 +3,11 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   actions: {
     save(model) {
-      alert('save '+this.suggestionText);
+      store.createRecord('flexberry-ember-demo-suggestion', {
+        address: ...',
+        body: 'Lorem ipsum'
+        });
+      alert('save '+model);
     },
-    saveText(text) {
-        this.suggestionText=text;     
-      alert('saveText '+text);
-    },
-    addSuggest(form) {
-        alert('addSuggest '+form);
-    }
   }
 });
