@@ -27,7 +27,29 @@ export default function() {
     this.get('/contacts/:id', 'user');
     this.get('/contacts/:id', ['contact', 'addresses']);
   */
-
+this.get('/flexberry-ember-demo-suggestions', function() {
+    return {
+            data: [
+                {
+                    type: 'flexberry-ember-demo-suggestion',
+                    id: 1,
+                    attributes: {
+                            'name':'Фонтан',
+                            'Moderated':true
+                    },
+                },
+                {
+                    type: 'flexberry-ember-demo-suggestion',
+                    id: 2,
+                    attributes: {
+                            'name':'Беседка',
+                            'Moderated':true
+                    },
+                }
+            ]
+        };
+    }
+);
   /*
     POST shorthands
 

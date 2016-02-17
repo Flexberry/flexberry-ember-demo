@@ -36,7 +36,7 @@
     "ember-data": "^2.3.0",
     "ember-disable-proxy-controllers": "^1.0.1",
     "ember-export-application-global": "^1.0.4",
-    "ember-flexberry": "git+https://github.com/Flexberry/ember-flexberry.git#ebecfd7b88d5649cdabd570b3d3a82b49e0cdbe6",
+    "ember-flexberry": "https://github.com/Flexberry/ember-flexberry.git#develop",
     "ember-load-initializers": "^0.5.0",
     "ember-resolver": "^2.0.3",
     "loader.js": "^4.0.0",
