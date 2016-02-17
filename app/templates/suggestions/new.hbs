@@ -1,4 +1,15 @@
-<h2>Оформите Ваше предложение</h2>
+<h2>{{title}}</h2>
+{{#if errorMessages}}
+  {{#each errorMessages as |currentError|}}
+        {{ui-message
+          type = 'error'
+          closeable = true
+          visible = true
+          title = "Error occurred"
+          message = currentError
+        }}
+  {{/each}}
+{{/if}}
 <form class="ui form" role="form">
 
   <div class="ui grid {{if model.errors.firstName 'error' ''}}">
@@ -7,7 +18,7 @@
     </div>
     <div class="ten wide column">
         <span style="color:red">{{model.errors.firstName}}</span>
-        {{input type="text" placeholder="(no value)" required=true value=flexberry-ember-demo-suggestion.Address}}
+        {{input type="text" placeholder="(no value)" required=true value=model.address}}
     </div>
   </div>
 
@@ -17,7 +28,7 @@
     </div>
     <div class="ten wide column">
         <span style="color:red">{{model.errors.firstName}}</span>
-        {{input type="text" placeholder="(no value)" required=true value=flexberry-ember-demo-suggestion.Text}}
+        {{input type="text" placeholder="(no value)" required=true value=model.text}}
     </div>
   </div>
   
