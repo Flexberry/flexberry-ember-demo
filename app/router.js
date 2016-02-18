@@ -6,9 +6,7 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('suggestionTypes', function() {
-    this.route('page', {path: 'page/:page'});
-  });
+  this.route('suggestionTypes');
   this.route('suggestions', function() {
     this.route('page', {path: 'page/:page'});
     this.route('new');

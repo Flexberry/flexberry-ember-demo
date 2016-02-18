@@ -1,6 +1,6 @@
 import { moduleFor, test } from 'ember-qunit';
 
-moduleFor('controller:suggestion-types/page', 'Unit | Controller | suggestion types/page', {
+moduleFor('controller:suggestion-types', 'Unit | Controller | suggestion types', {
   // Specify the other units that are required for this test.
   // needs: ['controller:foo']
 });
