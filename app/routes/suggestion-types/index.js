@@ -2,6 +2,6 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   beforeModel: function() {
-    this.transitionTo('suggestionTypes.page', 1);
+    //this.transitionTo('suggestionTypes.page', 1);
   }
 });
