@@ -36,6 +36,7 @@
     "ember-disable-proxy-controllers": "^1.0.1",
     "ember-export-application-global": "^1.0.4",
     "ember-flexberry": "https://github.com/Flexberry/ember-flexberry.git#develop",
+    "ember-flexberry-geolocation": "https://github.com/Flexberry/ember-flexberry-geolocation",
     "ember-load-initializers": "^0.5.0",
     "ember-resolver": "^2.0.3",
     "loader.js": "^4.0.0",
