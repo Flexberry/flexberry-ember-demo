@@ -28,6 +28,7 @@
     "ember-cli-htmlbars": "^1.0.1",
     "ember-cli-htmlbars-inline-precompile": "^0.3.1",
     "ember-cli-inject-live-reload": "^1.3.1",
+    "ember-cli-moment-shim": "1.0.0",
     "ember-cli-qunit": "^1.2.1",
     "ember-cli-release": "0.2.8",
     "ember-cli-sri": "^2.0.0",
@@ -38,8 +39,11 @@
     "ember-flexberry": "https://github.com/Flexberry/ember-flexberry.git#develop",
     "ember-flexberry-geolocation": "https://github.com/Flexberry/ember-flexberry-geolocation",
     "ember-load-initializers": "^0.5.0",
+    "ember-moment": "6.0.0",
     "ember-resolver": "^2.0.3",
     "loader.js": "^4.0.0",
+    "moment": "2.11.2",
+    "moment-timezone": "0.5.0",
     "phantomjs": "2.1.3",
     "semantic-ui-ember": "0.9.3"
   }
