@@ -6,10 +6,6 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('suggestionTypes');
-  this.route('suggestions');
-  this.route('suggestions.new', {path: 'suggestions/new'});
-  this.route('users');
   this.route('flexberry-ember-demo-suggestion-type', function() {
     this.route('new');
   });
