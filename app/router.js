@@ -14,8 +14,9 @@ Router.map(function() {
   });
   this.route('suggestions', function() {
     this.route('page', {path: 'page/:page'});
-    this.route('new');
+//     this.route('new', {path: 'new'});
   });
+  this.route('suggestions.new');
   this.route('users', function() {
     this.route('page', {path: 'page/:page'});
   });
