@@ -10,11 +10,20 @@ Router.map(function() {
   this.route('suggestions');
   this.route('suggestions.new', {path: 'suggestions/new'});
   this.route('users');
-  this.route('geolocation');
-
   this.route('flexberry-ember-demo-suggestion-type', function() {
     this.route('new');
   });
+  this.route('suggestionTypes', function() {
+    this.route('page', {path: 'page/:page'});
+  });
+  this.route('suggestions', function() {
+    this.route('page', {path: 'page/:page'});
+    this.route('new');
+  });
+  this.route('users', function() {
+    this.route('page', {path: 'page/:page'});
+  });
+  this.route('geolocation');
 });
 
 export default Router;
