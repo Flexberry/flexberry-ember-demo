@@ -7,11 +7,17 @@ export default Ember.Controller.extend({
       {
         title: "Admin panel",
         children: [
-          { link: "suggestionTypes", title: "Suggestion Types" },
+          { link: "flexberry-ember-demo-suggestion-types", title: "Suggestion Types" },
           { link: "users", title: "Application Users" }
         ]
       },
-      { link: "suggestions.new", title: "Добавить предложение" },
+      {
+        title: "Предложения",
+        children: [
+          { link: "flexberry-ember-demo-suggestions", title: "Список" },
+          { link: "flexberry-ember-demo-suggestion.new", title: "Добавить" }
+        ]
+      },
       {
         title: "Разное",
         children: [
