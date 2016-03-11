@@ -32,15 +32,26 @@
     </div>
   </div>
   
-    <div class="ten wide column">
-        
+  <div class="ten wide column">   
     <div class="ui grid {{if model.errors.suggestion 'error' ''}}">
-            <div class="ui two wide column right aligned middle aligned content">
-                <label>Выберите тип предложения:я</label>
-            </div>
-            <div class="ten wide column">
-            </div>
+      <div class="ui two wide column right aligned middle aligned content">
+	<label>Выберите тип предложения:</label>
+      </div>
+    <div class="ten wide column">
+      {{flexberry-lookup
+        choose='showLookupDialog'
+        remove='removeLookupValue'
+        value=model.type.name
+        relationName='type'
+        projection='SuggestionTypeL'
+        title='Тип предложения'
+        readonly=readonly
+        limitFunction=lookupLimitFunction
+        class=(concat 'sixteen wide ' (if model.errors.type 'error' ''))
+      }}
+      {{flexberry-validationmessage error=model.errors.type}}
     </div>
+  </div>
 </div>
   
     <button type="submit" class="ui primary button" {{action 'save'}}>Сохранить</button>
