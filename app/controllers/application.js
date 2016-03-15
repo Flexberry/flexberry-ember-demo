@@ -15,6 +15,14 @@ export default Ember.Controller.extend({
 	      { link: "flexberry-ember-demo-suggestion-type.new", title: "Добавить" }
 	    ]
 	  },
+	  {
+	    link:null,
+	    title:'Пользователи',
+	    children:[
+	      { link: "flexberry-ember-demo-application-users", title: "Список" },
+	      { link: "flexberry-ember-demo-application-user.new", title: "Добавить" }
+	    ]
+	  },
           { link: "users", title: "Application Users" }
         ]
       },

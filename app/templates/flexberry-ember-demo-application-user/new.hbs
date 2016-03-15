@@ -1,0 +1,43 @@
+<h2>{{title}}</h2>
+{{#if errorMessages}}
+  {{#each errorMessages as |currentError|}}
+        {{ui-message
+          type = 'error'
+          closeable = true
+          visible = true
+          title = "Error occurred"
+          message = currentError
+        }}
+  {{/each}}
+{{/if}}
+<form class="ui form" role="form">
+
+  <div class="ui grid {{if model.errors.name 'error' ''}}">
+    <div class="ui two wide column right aligned middle aligned content">
+        <label>Имя:</label>
+    </div>
+    <div class="ten wide column">
+        <span style="color:red">{{model.errors.name}}</span>
+        {{input type="text" placeholder="(no value)" required=true value=model.name}}
+    </div>
+  </div>
+
+  <div class="ui grid {{if model.errors.eMail 'error' ''}}">
+    <div class="ui two wide column right aligned middle aligned content">
+        <label>Имя:</label>
+    </div>
+    <div class="ten wide column">
+        <span style="color:red">{{model.errors.eMail}}</span>
+        {{input type="text" placeholder="(no value)" required=true value=model.eMail}}
+    </div>
+  </div>
+
+  
+    <button type="submit" class="ui primary button" {{action 'save'}}>Сохранить</button>
+
+</form>
+
+
+
+
+
