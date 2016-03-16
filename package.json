@@ -36,14 +36,14 @@
     "ember-data": "^2.3.0",
     "ember-disable-proxy-controllers": "^1.0.1",
     "ember-export-application-global": "^1.0.4",
-    "ember-flexberry": "git+https://github.com/Flexberry/ember-flexberry.git#3f331d2f533a1ba50398b3ab9a188915df560ca5",
+    "ember-flexberry": "git+https://github.com/Flexberry/ember-flexberry.git#1b301a23a0421b3d184599465926e948f7d076f8",
     "ember-flexberry-geolocation": "https://github.com/Flexberry/ember-flexberry-geolocation",
     "ember-load-initializers": "^0.5.0",
     "ember-moment": "6.0.0",
     "ember-resolver": "^2.0.3",
     "loader.js": "^4.0.0",
-    "moment": "2.11.2",
-    "moment-timezone": "0.5.1",
+    "moment": "2.12.0",
+    "moment-timezone": "0.5.2",
     "phantomjs": "2.1.3",
     "semantic-ui-ember": "0.9.3"
   }
