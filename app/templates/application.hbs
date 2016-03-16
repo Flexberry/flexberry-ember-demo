@@ -1,14 +1,27 @@
-<div class="ui grid page menu">
-    <a class="brand item" href="#">Flexberry Ember Demo</a>
-</div>
-<div class="ui grid page">
-    <div class="four wide column">
-		<div class="ui vertical menu">
-			{{render "sitemap" sitemap}}
-		</div>
+<div id="example-mobile">
+  {{#ui-sidebar class="inverted vertical menu"}}
+    <div class="header item">
+      <a class="brand" href="#">Flexberry Ember Demo</a>
     </div>
-    <div class="twelve wide column">
-      {{outlet}}
-      {{outlet 'modal'}}
+    {{render "sitemap" sitemap}}
+  {{/ui-sidebar}} 
+  <div class="pusher">
+    <div class="full height">
+      <div class="ui top attached">
+        <div class="ui attached menu">
+          <div class="ui container">
+            <a {{ action 'toggleSidebar' }} class="launch icon item"><i class="sidebar icon"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="flexberry-content ui attached segment">
+        <div class="ui main container">
+          <div class="stackable grid container">
+              {{outlet}}
+              {{outlet 'modal'}}
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </div>
