@@ -1,5 +1,5 @@
-import EditFormController from 'ember-flexberry/controllers/edit-form';
+import FlexberryEmberDemoSuggestionEController from '../flexberry-ember-demo-suggestion';
 
-export default EditFormController.extend({
-  title: 'Оформите Ваше предложение'
-});
+var FlexberryEmberDemoSuggestionENewController = FlexberryEmberDemoSuggestionEController;
+export default FlexberryEmberDemoSuggestionENewController;
+

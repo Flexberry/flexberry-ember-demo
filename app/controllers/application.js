@@ -1,49 +1,35 @@
-import Ember from "ember";
+import Ember from 'ember';
 
 export default Ember.Controller.extend({
+session: Ember.inject.service('session'),
   sitemap: {
-    nodes: [
-      { link: "index", title: "Home" },
-      {
-        title: "Администрирование",
-        children: [
-	  {
-	    link:null,
-	    title:'Типы предложений',
-	    children:[
-	      { link: "flexberry-ember-demo-suggestion-types", title: "Список" },
-	      { link: "flexberry-ember-demo-suggestion-type.new", title: "Добавить" }
-	    ]
+nodes: [{
+	link: 'index',
+	title: 'Home',
+	children: null
+    }, {
+	link: null,
+	title: 'Objects',
+	children: [{
+	  link: 'flexberry-ember-demo-application-user-l',
+	  title: 'Application user',
+	  children: null
 	  },
 	  {
-	    link:null,
-	    title:'Пользователи',
-	    children:[
-	      { link: "flexberry-ember-demo-application-users", title: "Список" },
-	      { link: "flexberry-ember-demo-application-user.new", title: "Добавить" }
-	    ]
+	  link: 'flexberry-ember-demo-localization-l',
+	  title: 'Localization',
+	  children: null
 	  },
-          { link: "users", title: "Application Users" }
-        ]
-      },
-      {
-        title: "Предложения",
-        children: [
-          { link: "flexberry-ember-demo-suggestions", title: "Список" },
-          { link: "flexberry-ember-demo-suggestion.new", title: "Добавить" }
-        ]
-      },
-      {
-        title: "Разное",
-        children: [
-          { link: "geolocation", title: "Геолокация" }
-        ]
-      }
-    ]
-  },
-  actions: {
-    toggleSidebar: function(direction) {
-      $('.ui.sidebar').sidebar('toggle');
-    }
-  }
-});
+	  {
+	  link: 'flexberry-ember-demo-suggestion-l',
+	  title: 'Suggestion',
+	  children: null
+	  },
+	  {
+	  link: 'flexberry-ember-demo-suggestion-type-l',
+	  title: 'Suggestion type',
+	  children: null
+	  }]
+    }]
+}
+}); 

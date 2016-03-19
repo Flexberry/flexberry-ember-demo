@@ -1,6 +1,7 @@
-import EditFormController from './edit-form';
+import EditFormController from 'ember-flexberry/controllers/edit-form';
 
 export default EditFormController.extend({
-  // Caption of this particular edit form.
-  title: 'Тип предложения'
-});
+    // Caption of this particular edit form.
+    title: 'Suggestion type'
+
+}); 

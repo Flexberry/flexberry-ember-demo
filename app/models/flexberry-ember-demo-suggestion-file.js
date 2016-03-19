@@ -3,14 +3,17 @@ import BaseModel from 'ember-flexberry/models/base';
 import Proj from 'ember-flexberry-projections';
 
 var Model = BaseModel.extend({
-  order: DS.attr('number'),
-  file: DS.attr('string'),
-  validations: {}
+order: DS.attr('number'),
+ file: DS.attr('string'),
+ suggestion: DS.belongsTo('flexberry-ember-demo-suggestion', { inverse: 'files', async: false }),
+ validations: { 
+ 
+ }
 });
 
 Model.defineProjection('SuggestionFileE', 'flexberry-ember-demo-suggestion-file', {
-  order: Proj.attr('Order'),
-  file: Proj.attr('File')
+order: Proj.attr('Order'),
+ file: Proj.attr('File')
 });
 
 export default Model;

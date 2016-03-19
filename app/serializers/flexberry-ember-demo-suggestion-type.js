@@ -1,7 +1,13 @@
-import DS from 'ember-data';
 import ApplicationSerializer from './application';
 
-export default ApplicationSerializer.extend(DS.EmbeddedRecordsMixin, {
+// TODO: ODataSerializer.extend
+export default ApplicationSerializer.extend({
+attrs: {
+parent: { serialize: 'odata-id', deserialize: 'records' },
+localizedTypes: { serialize: false, deserialize: 'records' }
+},
+/**
+  * Field name where object identifier is kept.
+  */
   primaryKey: '__PrimaryKey'
 });
-

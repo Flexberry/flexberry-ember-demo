@@ -1,46 +1,99 @@
-<h3>{{title}} - Добавление типа предложения</h3>
+<h3 class="ui header">{{title}} - edit form</h3>
 
 {{#if errorMessages}}
-  {{#each errorMessages as |currentError|}}
-    {{ui-message
-    type='error'
-    closeable=true
-    visible=true
-    title='Error occurred'
-    message=currentError
-    }}
-  {{/each}}
+{{#each errorMessages as |currentError|}}
+{{
+ui-message
+type='error'
+closeable=true
+visible=true
+title='Error occurred'
+message=currentError
+}}
+{{/each}}
 {{/if}}
-
-<form class="ui form flexberry-horizontal-form" role="form">
-	<div class="field">
-	<div class="flexberry-edit-panel">
-		{{#unless readonly}}
-		<button type="submit" class="ui positive button" {{action 'save'}}>Save</button>
-		{{#unless model.isNew}}
-			<button type="submit" class="ui negative button" {{action 'delete'}}>Delete</button>
-		{{/unless}}
-		{{/unless}}
-		<button type="submit" class="ui button" {{action 'close'}}>Close</button>
-	</div>
-	</div>
-  
-	<div class="inline fields">
-		{{flexberry-field
-		placeholder='(no value)'
-		required=true
-		value=model.name
-		label='Название типа'
-		class=(concat 'sixteen wide ' (if model.errors.name 'error' ''))
-		}}
-		{{flexberry-validationmessage error=model.errors.name pointing='left pointing'}}
-	</div>
-	
-	<div class="inline fields">
-		{{flexberry-checkbox
-			label='Модерируемый'
-		}}
-	</div>
-
+<form class="ui form flexberry-vertical-form" role="form">
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+      <button type="submit" class="ui positive button" {{action 'save'}}>Save</button>
+      {{#unless model.isNew}}
+      <button type="submit" class="ui negative button" {{action 'delete'}}>Delete</button>
+      {{/unless}}
+      {{/unless}}
+      <button type="submit" class="ui button" {{action 'close'}}>Close</button>
+    </div>
+  </div>
+<div class="field">
+  {{#if model.errors.name}}
+    <span style ="color:red">
+      {{model.errors.name}}
+    </span>
+  {{/if}}
+  {{
+  flexberry-field
+  placeholder='(no value)'
+  readonly=readonly
+  required=true
+  value=model.name
+  class=(if model.errors.name 'error' '')
+  label='Name'
+  }}
+</div>
+<div class="field">
+  {{#if model.errors.moderated}}
+    <span style="color:red">{{model.errors.moderated}}</span>
+  {{/if}}
+  {{flexberry-checkbox readonly=readonly checked=model.moderated}}
+</div>
+<div class="field">
+  <label>Parent</label>
+  {{#if model.errors.parent}}
+    <span style="color:red">{{model.errors.parent}}</span>
+  {{/if}}
+      {{
+    flexberry-lookup
+    choose='showLookupDialog'
+    remove='removeLookupValue'
+    value=null
+    relationName='parent'
+    projection='SuggestionTypeL'
+    title='Parent'
+    readonly=readonly
+    limitFunction=null
+    class=(if model.errors.parent 'error' '')
+}}
+</div>
+<div class="field">
+  {{#if model.errors.parent.name}}
+    <span style ="color:red">
+      {{model.errors.parent.name}}
+    </span>
+  {{/if}}
+  {{
+  flexberry-field
+  placeholder='(no value)'
+  readonly=readonly
+  required=true
+  value=model.parent.name
+  class=(if model.errors.parent.name 'error' '')
+  label='Name'
+  }}
+</div>
+<div class="field">
+  <label>Localized types</label>
+  {{#if model.errors.localizedTypes}}
+    <span style="color:red">{{model.errors.localizedTypes}}</span>
+  {{/if}}
+  {{
+    flexberry-groupedit
+    componentName="localizedTypesGroupEdit"
+    class="attached"
+    modelProjection=modelProjection.attributes.localizedTypes
+    content=model.localizedTypes
+    readonly=readonly
+    orderable=false
+    class=(if model.errors.localizedTypes 'error' '')
+}}
+</div>
 </form>
-

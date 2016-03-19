@@ -1,0 +1,5 @@
+import FlexberryEmberDemoApplicationUserEController from '../flexberry-ember-demo-application-user';
+
+var FlexberryEmberDemoApplicationUserENewController = FlexberryEmberDemoApplicationUserEController;
+export default FlexberryEmberDemoApplicationUserENewController;
+
