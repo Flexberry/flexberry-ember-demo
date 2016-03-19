@@ -31,5 +31,11 @@ nodes: [{
 	  children: null
 	  }]
     }]
-}
+},
+  actions: {
+    toggleSidebar: function(direction) {
+      $('.ui.sidebar').sidebar('toggle');
+    }
+  }
+
 }); 
