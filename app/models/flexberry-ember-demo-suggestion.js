@@ -25,18 +25,18 @@ address: Proj.attr('Address'),
  votes: Proj.attr('Votes'),
  moderated: Proj.attr('Moderated'),
  type: Proj.belongsTo('flexberry-ember-demo-suggestion-type', 'Type', { 
-name: Proj.attr('Name') 
-}),
+      name: Proj.attr('Name') 
+      }),
  author: Proj.belongsTo('flexberry-ember-demo-application-user', 'Author', { 
-name: Proj.attr('Name') 
-}),
+      name: Proj.attr('Name') 
+      }),
  comments: Proj.hasMany('flexberry-ember-demo-comment', 'Comments', {
 text: Proj.attr('Text'),
  votes: Proj.attr('Votes'),
  moderated: Proj.attr('Moderated'),
  author: Proj.belongsTo('flexberry-ember-demo-application-user', 'Author', { 
-name: Proj.attr('Name', { hidden: true }) 
-}),
+            name: Proj.attr('Name', { hidden: true }) 
+            }),
  userVotes: Proj.hasMany('flexberry-ember-demo-comment-vote', 'User votes', {
 voteType: Proj.attr('Vote type'),
  applicationUser: Proj.belongsTo('flexberry-ember-demo-application-user', 'Application user', { 
@@ -51,8 +51,8 @@ order: Proj.attr('Order'),
  userVotes: Proj.hasMany('flexberry-ember-demo-vote', 'User votes', {
 voteType: Proj.attr('Vote type'),
  applicationUser: Proj.belongsTo('flexberry-ember-demo-application-user', 'Application user', { 
-name: Proj.attr('Name', { hidden: true }) 
-})
+            name: Proj.attr('Name', { hidden: true }) 
+            })
 })
 });
  Model.defineProjection('SuggestionL', 'flexberry-ember-demo-suggestion', {
@@ -62,11 +62,11 @@ address: Proj.attr('Address'),
  votes: Proj.attr('Votes'),
  moderated: Proj.attr('Moderated'),
  type: Proj.belongsTo('flexberry-ember-demo-suggestion-type', 'Name', { 
-name: Proj.attr('Name') 
-}),
+      name: Proj.attr('Name') 
+      }),
  author: Proj.belongsTo('flexberry-ember-demo-application-user', 'Name', { 
-name: Proj.attr('Name') 
-})
+      name: Proj.attr('Name') 
+      })
 });
 
 export default Model;

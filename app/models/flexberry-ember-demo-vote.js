@@ -14,8 +14,8 @@ voteType: DS.attr('flexberry-ember-demo-vote-type'),
 Model.defineProjection('VoteE', 'flexberry-ember-demo-vote', {
 voteType: Proj.attr('Vote type'),
  applicationUser: Proj.belongsTo('flexberry-ember-demo-application-user', 'Application user', { 
-name: Proj.attr('Name', { hidden: true }) 
-})
+      name: Proj.attr('Name', { hidden: true }) 
+      })
 });
 
 export default Model;
