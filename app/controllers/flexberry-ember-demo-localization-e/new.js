@@ -1,5 +1,4 @@
-import FlexberryEmberDemoLocalizationEController from '../flexberry-ember-demo-localization';
+import FlexberryEmberDemoLocalizationEController from '../flexberry-ember-demo-localization-e';
 
 var FlexberryEmberDemoLocalizationENewController = FlexberryEmberDemoLocalizationEController;
 export default FlexberryEmberDemoLocalizationENewController;
-

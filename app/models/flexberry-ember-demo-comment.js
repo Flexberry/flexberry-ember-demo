@@ -19,13 +19,13 @@ text: Proj.attr('Text'),
  votes: Proj.attr('Votes'),
  moderated: Proj.attr('Moderated'),
  author: Proj.belongsTo('flexberry-ember-demo-application-user', 'Author', { 
-name: Proj.attr('Name', { hidden: true }) 
-}),
+      name: Proj.attr('Name', { hidden: true }) 
+      }),
  userVotes: Proj.hasMany('flexberry-ember-demo-comment-vote', 'User votes', {
 voteType: Proj.attr('Vote type'),
  applicationUser: Proj.belongsTo('flexberry-ember-demo-application-user', 'Application user', { 
-name: Proj.attr('Name', { hidden: true }) 
-})
+            name: Proj.attr('Name', { hidden: true }) 
+            })
 })
 });
 

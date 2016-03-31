@@ -4,7 +4,7 @@ import Proj from 'ember-flexberry-projections';
 
 var Model = BaseModel.extend({
 order: DS.attr('number'),
- file: DS.attr('string'),
+ file: DS.attr('file'),
  suggestion: DS.belongsTo('flexberry-ember-demo-suggestion', { inverse: 'files', async: false }),
  validations: { 
  
