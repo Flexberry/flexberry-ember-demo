@@ -13,9 +13,10 @@ var Model = BaseModel.extend({
 
 Model.defineProjection('LocalizedSuggestionTypeE', 'flexberry-ember-demo-localized-suggestion-type', {
 name: Proj.attr('Name'),
-    localization: Proj.belongsTo('flexberry-ember-demo-localization', 'Localization', { 
-    name: Proj.attr('Name', { hidden: true }) 
-    })
+
+ localization: Proj.belongsTo('flexberry-ember-demo-localization', 'Localization', { 
+      name: Proj.attr('Name', { hidden: true }) 
+      })
 });
 
 export default Model;

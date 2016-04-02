@@ -13,9 +13,10 @@ var Model = BaseModel.extend({
 
 Model.defineProjection('VoteE', 'flexberry-ember-demo-vote', {
 voteType: Proj.attr('Vote type'),
-    applicationUser: Proj.belongsTo('flexberry-ember-demo-application-user', 'Application user', { 
-    name: Proj.attr('Name', { hidden: true }) 
-    })
+
+ applicationUser: Proj.belongsTo('flexberry-ember-demo-application-user', 'Application user', { 
+      name: Proj.attr('Name', { hidden: true }) 
+      })
 });
 
 export default Model;
