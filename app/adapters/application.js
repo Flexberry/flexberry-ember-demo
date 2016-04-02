@@ -1,8 +1,11 @@
 // import ODataAdapter from 'ember-flexberry/adapters/odata';
 // import Proj from 'ember-flexberry-projections';
-import config from '../config/environment';
+import Ember from 'ember';
+import DS from 'ember-data';
+// import config from '../config/environment';
 export default DS.JSONAPIAdapter.extend({
-    host: 'http://demo.jsonapiserver.local',
+	host: 'http://jsonapiserver.local',
+	namespace: 'flexberry-ember-demo',
     
 //COPY from odata adapter
 //   headers: {
