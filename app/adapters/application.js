@@ -6,7 +6,6 @@ import DS from 'ember-data';
 export default DS.JSONAPIAdapter.extend({
 	host: 'http://jsonapiserver.local',
 	namespace: 'flexberry-ember-demo',
-    
 //COPY from odata adapter
 //   headers: {
 //     Prefer: 'return=representation'
