@@ -1,4 +1,6 @@
 # Flexberry-ember-demo
+[![Travis branch](https://img.shields.io/travis/Flexberry/flexberry-ember-demo/master.svg?label=master%20build%20)](https://travis-ci.org/Flexberry/flexberry-ember-demo)
+[![Travis branch](https://img.shields.io/travis/Flexberry/flexberry-ember-demo/develop.svg?label=develop%20build)](https://travis-ci.org/Flexberry/flexberry-ember-demo/branches)
 
 This README outlines the details of collaborating on this Ember application.
 A short introduction of this app could easily go here.
