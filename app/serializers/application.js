@@ -24,7 +24,7 @@ let BaseSerializer = DS.JSONAPISerializer.extend({
    * @param id Identifier of received object.
    * @returns {object} Valid {@link http://jsonapi.org/format/#document-top-level|JSON API document}.
    */
-  normalizeSingleResponse: function(store, typeClass, payload, id) {
+  normalizeSingleResponse: function(store, typeClass, payload/*, id*/) {
 	  return payload;
 //     payload = {
 //       [typeClass.modelName]: payload
@@ -85,7 +85,7 @@ let BaseSerializer = DS.JSONAPISerializer.extend({
    * @param relationship Relationship.
    * @returns {string} Key for a given relationship.
    */
-  keyForRelationship: function(key, relationship) {
+  keyForRelationship: function(key/*, relationship*/) {
     return Ember.String.capitalize(key);
 //     return Ember.String.capitalize(key) + '@odata.bind';
   },
