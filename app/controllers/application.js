@@ -31,6 +31,17 @@ export default Ember.Controller.extend({
 						children: null
 					}
 				]
+			},
+			{
+				link: null,
+				title: 'Objects',
+				children: [
+				  {
+					link: 'i-i-s-caseberry-logging-objects-application-log-l',
+					title: 'Лог приложения',
+					children: null
+				  }
+				]
 			}
 		]
 	},
