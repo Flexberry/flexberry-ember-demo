@@ -1,5 +1,6 @@
-import EnumTransform from 'ember-flexberry/transforms/enum-string';
+import FlexberryEnum from 'ember-flexberry/transforms/flexberry-enum';
+import GenderEnum from '../enums/gender';
 
-export default EnumTransform.extend({
-values: ['Male', 'Female', 'Unknown']
-}); 
+export default FlexberryEnum.extend({
+      enum: GenderEnum
+});
