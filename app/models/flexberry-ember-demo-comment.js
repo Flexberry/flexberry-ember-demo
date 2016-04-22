@@ -3,19 +3,20 @@ import BaseModel from 'ember-flexberry/models/base';
 import Proj from 'ember-flexberry-projections';
 
 var Model = BaseModel.extend({
-text: DS.attr('string'),
- votes: DS.attr('number'),
- moderated: DS.attr('boolean'),
- author: DS.belongsTo('flexberry-ember-demo-application-user', { inverse: null, async: false }),
- suggestion: DS.belongsTo('flexberry-ember-demo-suggestion', { inverse: 'comments', async: false }),
- userVotes: DS.hasMany('flexberry-ember-demo-comment-vote', { inverse: 'comment', async: false }),
- validations: { 
+    text: DS.attr('string'),
+    votes: DS.attr('number'),
+    moderated: DS.attr('boolean'),
+    author: DS.belongsTo('flexberry-ember-demo-application-user', { inverse: null, async: false }),
+    suggestion: DS.belongsTo('flexberry-ember-demo-suggestion', { inverse: 'comments', async: false }),
+    userVotes: DS.hasMany('flexberry-ember-demo-comment-vote', { inverse: 'comment', async: false }),
+    validations: { 
  
  }
 });
 
 Model.defineProjection('CommentE', 'flexberry-ember-demo-comment', {
 text: Proj.attr('Text'),
+
  votes: Proj.attr('Votes'),
  moderated: Proj.attr('Moderated'),
  author: Proj.belongsTo('flexberry-ember-demo-application-user', 'Author', { 

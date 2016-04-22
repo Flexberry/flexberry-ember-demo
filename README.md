@@ -53,3 +53,9 @@ Specify what it takes to deploy your app.
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
 
+
+### JSONAPI Notes
+Current release have changes in ember-flexberry tree:
+* app/adapters/application.js - code should move to node_modules/ember-flexberry/addon/adapters/jsonapi.js - set paging (page attributes), sorting (sort attributes) and others
+* node_modules/ember-flexberry/node_modules/ember-flexberry-projections/addon/mixins/store-jsonapi.js - store support JSONAPI-query parameters: fields[modelname]=attributenameList ($select@Odata), include=... ($expand@Odata)
+* ode_modules/ember-flexberry/node_modules/ember-flexberry-projections/addon/index.js - change import from ./mixins/store to ./mixins/store-jsonapi

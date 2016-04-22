@@ -21,6 +21,10 @@ this.route('flexberry-ember-demo-suggestion-e.new', { path: 'flexberry-ember-dem
 this.route('flexberry-ember-demo-suggestion-type-l');
 this.route('flexberry-ember-demo-suggestion-type-e', { path: 'flexberry-ember-demo-suggestion-type-e/:id' });
 this.route('flexberry-ember-demo-suggestion-type-e.new', { path: 'flexberry-ember-demo-suggestion-type-e/new' });
+this.route('i-i-s-caseberry-logging-objects-application-log-l');
+this.route('i-i-s-caseberry-logging-objects-application-log-e', { path: 'i-i-s-caseberry-logging-objects-application-log-e/:id' });
+this.route('i-i-s-caseberry-logging-objects-application-log-e.new', { path: 'i-i-s-caseberry-logging-objects-application-log-e/new' });
+
 
 });
 
