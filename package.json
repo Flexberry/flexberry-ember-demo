@@ -36,7 +36,7 @@
     "ember-data": "^2.5.2",
     "ember-disable-proxy-controllers": "^1.0.1",
     "ember-export-application-global": "^1.0.4",
-    "ember-flexberry": "git+https://github.com/Flexberry/ember-flexberry.git#f90f7958855be563910eed43adab6082c5b516cc",
+    "ember-flexberry": "git+https://github.com/Flexberry/ember-flexberry.git#14ff89113001f04b46f5bee46bebeb5f5b03f26b",
     "ember-flexberry-geolocation": "https://github.com/Flexberry/ember-flexberry-geolocation",
     "ember-load-initializers": "^0.5.0",
     "ember-moment": "6.0.0",
