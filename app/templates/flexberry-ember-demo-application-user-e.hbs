@@ -186,7 +186,7 @@ message=currentError
   {{#if model.errors.gender}}
     <span style="color:red">{{model.errors.gender}}</span>
   {{/if}}
-  {{flexberry-dropdown items=approvalValues action="setApproval" selectedItem=model.gender readonly=readonly}}
+  {{flexberry-dropdown items=(enum-captions 'gender') value=model.gender readonly=readonly}}
 </div>
 
 <div class="field">

@@ -1,5 +1,6 @@
-import EnumTransform from 'ember-flexberry/transforms/enum-string';
+import FlexberryEnum from 'ember-flexberry/transforms/flexberry-enum';
+import VoteTypeEnum from '../enums/vote-type';
 
-export default EnumTransform.extend({
-values: ['Like', 'Dislike']
-}); 
+export default FlexberryEnum.extend({
+      enum: VoteTypeEnum
+});
