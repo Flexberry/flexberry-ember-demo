@@ -15,7 +15,7 @@ module.exports = function(environment) {
 
     APP: {
       backendUrl: 'http://flexberry-ember-demo.azurewebsites.net/odata',
-      flexberryLogLevel: 6
+      flexberryLogLevel: 0
     }
   };
 
