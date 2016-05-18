@@ -1,6 +1,6 @@
 import DS from 'ember-data';
 import BaseModel from 'ember-flexberry/models/base';
-import Proj from 'ember-flexberry-projections';
+import Proj from 'ember-flexberry-data';
 
 var Model = BaseModel.extend({
 text: DS.attr('string'),
@@ -9,8 +9,8 @@ text: DS.attr('string'),
  author: DS.belongsTo('flexberry-ember-demo-application-user', { inverse: null, async: false }),
  suggestion: DS.belongsTo('flexberry-ember-demo-suggestion', { inverse: 'comments', async: false }),
  userVotes: DS.hasMany('flexberry-ember-demo-comment-vote', { inverse: 'comment', async: false }),
- validations: { 
- 
+ validations: {
+
  }
 });
 
@@ -18,13 +18,13 @@ Model.defineProjection('CommentE', 'flexberry-ember-demo-comment', {
 text: Proj.attr('Text'),
  votes: Proj.attr('Votes'),
  moderated: Proj.attr('Moderated'),
- author: Proj.belongsTo('flexberry-ember-demo-application-user', 'Author', { 
-      name: Proj.attr('Name', { hidden: true }) 
+ author: Proj.belongsTo('flexberry-ember-demo-application-user', 'Author', {
+      name: Proj.attr('Name', { hidden: true })
       }),
  userVotes: Proj.hasMany('flexberry-ember-demo-comment-vote', 'User votes', {
 voteType: Proj.attr('Vote type'),
- applicationUser: Proj.belongsTo('flexberry-ember-demo-application-user', 'Application user', { 
-            name: Proj.attr('Name', { hidden: true }) 
+ applicationUser: Proj.belongsTo('flexberry-ember-demo-application-user', 'Application user', {
+            name: Proj.attr('Name', { hidden: true })
             })
 })
 });

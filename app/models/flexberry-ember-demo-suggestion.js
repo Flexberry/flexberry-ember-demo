@@ -1,6 +1,6 @@
 import DS from 'ember-data';
 import BaseModel from 'ember-flexberry/models/base';
-import Proj from 'ember-flexberry-projections';
+import Proj from 'ember-flexberry-data';
 
 var Model = BaseModel.extend({
 address: DS.attr('string'),
@@ -13,8 +13,8 @@ address: DS.attr('string'),
  comments: DS.hasMany('flexberry-ember-demo-comment', { inverse: 'suggestion', async: false }),
  files: DS.hasMany('flexberry-ember-demo-suggestion-file', { inverse: 'suggestion', async: false }),
  userVotes: DS.hasMany('flexberry-ember-demo-vote', { inverse: 'suggestion', async: false }),
- validations: { 
- 
+ validations: {
+
  }
 });
 
@@ -24,23 +24,23 @@ address: Proj.attr('Address'),
  date: Proj.attr('Date'),
  votes: Proj.attr('Votes'),
  moderated: Proj.attr('Moderated'),
- type: Proj.belongsTo('flexberry-ember-demo-suggestion-type', 'Type', { 
-      name: Proj.attr('Name') 
+ type: Proj.belongsTo('flexberry-ember-demo-suggestion-type', 'Type', {
+      name: Proj.attr('Name')
       }),
- author: Proj.belongsTo('flexberry-ember-demo-application-user', 'Author', { 
-      name: Proj.attr('Name') 
+ author: Proj.belongsTo('flexberry-ember-demo-application-user', 'Author', {
+      name: Proj.attr('Name')
       }),
  comments: Proj.hasMany('flexberry-ember-demo-comment', 'Comments', {
 text: Proj.attr('Text'),
  votes: Proj.attr('Votes'),
  moderated: Proj.attr('Moderated'),
- author: Proj.belongsTo('flexberry-ember-demo-application-user', 'Author', { 
-            name: Proj.attr('Name', { hidden: true }) 
+ author: Proj.belongsTo('flexberry-ember-demo-application-user', 'Author', {
+            name: Proj.attr('Name', { hidden: true })
             }),
  userVotes: Proj.hasMany('flexberry-ember-demo-comment-vote', 'User votes', {
 voteType: Proj.attr('Vote type'),
- applicationUser: Proj.belongsTo('flexberry-ember-demo-application-user', 'Application user', { 
-name: Proj.attr('Name', { hidden: true }) 
+ applicationUser: Proj.belongsTo('flexberry-ember-demo-application-user', 'Application user', {
+name: Proj.attr('Name', { hidden: true })
 })
 })
 }),
@@ -50,8 +50,8 @@ order: Proj.attr('Order'),
 }),
  userVotes: Proj.hasMany('flexberry-ember-demo-vote', 'User votes', {
 voteType: Proj.attr('Vote type'),
- applicationUser: Proj.belongsTo('flexberry-ember-demo-application-user', 'Application user', { 
-            name: Proj.attr('Name', { hidden: true }) 
+ applicationUser: Proj.belongsTo('flexberry-ember-demo-application-user', 'Application user', {
+            name: Proj.attr('Name', { hidden: true })
             })
 })
 });
@@ -61,11 +61,11 @@ address: Proj.attr('Address'),
  date: Proj.attr('Date'),
  votes: Proj.attr('Votes'),
  moderated: Proj.attr('Moderated'),
- type: Proj.belongsTo('flexberry-ember-demo-suggestion-type', 'Name', { 
-      name: Proj.attr('Name') 
+ type: Proj.belongsTo('flexberry-ember-demo-suggestion-type', 'Name', {
+      name: Proj.attr('Name')
       }),
- author: Proj.belongsTo('flexberry-ember-demo-application-user', 'Name', { 
-      name: Proj.attr('Name') 
+ author: Proj.belongsTo('flexberry-ember-demo-application-user', 'Name', {
+      name: Proj.attr('Name')
       })
 });
 
