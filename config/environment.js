@@ -55,6 +55,30 @@ module.exports = function(environment) {
         storeDeprecationMessages: false,
         showPromiseErrors: true,
       },
+
+      // Custom property with components settings.
+      components: {
+        // Settings for flexberry-file component.
+        flexberryFile: {
+          // URL of file upload controller.
+          uploadUrl: backendUrl + '/api/File',
+
+          // Max file size in bytes for uploading files.
+          maxUploadFileSize: null,
+
+          // Flag: indicates whether to upload file on controllers modelPreSave event.
+          uploadOnModelPreSave: true,
+
+          // Flag: indicates whether to show upload button or not.
+          showUploadButton: true,
+
+          // Flag: indicates whether to show modal dialog on upload errors or not.
+          showModalDialogOnUploadError: true,
+
+          // Flag: indicates whether to show modal dialog on download errors or not.
+          showModalDialogOnDownloadError: true,
+        }
+      },
     }
   };
 
