@@ -1,0 +1,286 @@
+﻿{
+  "name": "FlexberryEmberDemoSuggestion",
+  "modelName": "flexberry-ember-demo-suggestion",
+  "className": "Suggestion",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "address",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    },
+    {
+      "name": "text",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    },
+    {
+      "name": "date",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "Now",
+      "stored": true
+    },
+    {
+      "name": "votes",
+      "type": "number",
+      "flexberryType": "long",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    },
+    {
+      "name": "moderated",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    },
+    {
+      "name": "polygon",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "type",
+      "relatedTo": "flexberry-ember-demo-suggestion-type",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "author",
+      "relatedTo": "flexberry-ember-demo-application-user",
+      "inverse": null
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "comments",
+      "relatedTo": "flexberry-ember-demo-comment",
+      "inverse": "suggestion"
+    },
+    {
+      "name": "files",
+      "relatedTo": "flexberry-ember-demo-suggestion-file",
+      "inverse": "suggestion"
+    },
+    {
+      "name": "userVotes",
+      "relatedTo": "flexberry-ember-demo-vote",
+      "inverse": "suggestion"
+    }
+  ],
+  "projections": [
+    {
+      "name": "SuggestionE",
+      "modelName": "flexberry-ember-demo-suggestion",
+      "attrs": [
+        {
+          "name": "address",
+          "caption": "Адрес",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "text",
+          "caption": "Текст",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "polygon",
+          "caption": "Полигон",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "date",
+          "caption": "Дата",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "votes",
+          "caption": "Голоса",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "moderated",
+          "caption": "Одобрено",
+          "hidden": false,
+          "index": 5
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Name",
+          "lookupValueField": "name",
+          "relationName": "Type",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "Name",
+              "hidden": true,
+              "index": 7
+            }
+          ],
+          "index": 6,
+          "caption": "Тип",
+          "name": "type",
+          "relatedTo": "flexberry-ember-demo-suggestion-type",
+          "inverse": null
+        },
+        {
+          "lookupValue": "Name",
+          "lookupValueField": "name",
+          "relationName": "Author",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "Name",
+              "hidden": true,
+              "index": 9
+            }
+          ],
+          "index": 8,
+          "caption": "Автор",
+          "name": "author",
+          "relatedTo": "flexberry-ember-demo-application-user",
+          "inverse": null
+        }
+      ],
+      "hasMany": [
+        {
+          "projectionName": "CommentE",
+          "caption": "Комментарии",
+          "name": "comments",
+          "relatedTo": "flexberry-ember-demo-comment",
+          "inverse": null
+        },
+        {
+          "projectionName": "SuggestionFileE",
+          "caption": "Файлы",
+          "name": "files",
+          "relatedTo": "flexberry-ember-demo-suggestion-file",
+          "inverse": null
+        },
+        {
+          "projectionName": "VoteE",
+          "caption": "Голоса пользователей",
+          "name": "userVotes",
+          "relatedTo": "flexberry-ember-demo-vote",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "SuggestionL",
+      "modelName": "flexberry-ember-demo-suggestion",
+      "attrs": [
+        {
+          "name": "address",
+          "caption": "Адрес",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "text",
+          "caption": "Текст",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "date",
+          "caption": "Дата",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "votes",
+          "caption": "Голоса",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "moderated",
+          "caption": "Одобрено",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "polygon",
+          "caption": "",
+          "hidden": true,
+          "index": 7
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Type",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "Тип предложения",
+              "hidden": false,
+              "index": 5
+            }
+          ],
+          "index": -1,
+          "caption": "Тип предложения",
+          "name": "type",
+          "relatedTo": "flexberry-ember-demo-suggestion-type",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Author",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "Автор",
+              "hidden": false,
+              "index": 6
+            }
+          ],
+          "index": -1,
+          "caption": "Автор",
+          "name": "author",
+          "relatedTo": "flexberry-ember-demo-application-user",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true
+}

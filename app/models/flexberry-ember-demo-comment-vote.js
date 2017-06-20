@@ -1,21 +1,9 @@
-import DS from 'ember-data';
-import BaseModel from 'ember-flexberry/models/base';
-import Proj from 'ember-flexberry-data';
+import { Model as CommentVoteMixin, defineProjections } from
+  '../mixins/regenerated/models/flexberry-ember-demo-comment-vote';
+import { Projection } from 'ember-flexberry-data';
+import { Offline } from 'ember-flexberry-data';
+let Model = Projection.Model.extend(Offline.ModelMixin, CommentVoteMixin, {
 
-var Model = BaseModel.extend({
-voteType: DS.attr('flexberry-ember-demo-vote-type'),
- applicationUser: DS.belongsTo('flexberry-ember-demo-application-user', { inverse: null, async: false }),
- comment: DS.belongsTo('flexberry-ember-demo-comment', { inverse: 'userVotes', async: false }),
- validations: {
-
- }
 });
-
-Model.defineProjection('CommentVoteE', 'flexberry-ember-demo-comment-vote', {
-voteType: Proj.attr('Vote type'),
- applicationUser: Proj.belongsTo('flexberry-ember-demo-application-user', 'Application user', {
-      name: Proj.attr('Name', { hidden: true })
-      })
-});
-
+defineProjections(Model);
 export default Model;

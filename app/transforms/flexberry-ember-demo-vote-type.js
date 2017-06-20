@@ -1,6 +1,7 @@
-import FlexberryEnum from 'ember-flexberry/transforms/flexberry-enum';
-import VoteTypeEnum from '../enums/vote-type';
+import FlexberryEnum from 'ember-flexberry-data/transforms/flexberry-enum';
+import VoteTypeEnum from '../enums/flexberry-ember-demo-vote-type';
 
 export default FlexberryEnum.extend({
-      enum: VoteTypeEnum
+  enum: VoteTypeEnum,
+  sourceType: 'FlexberryEmberDemo.VoteType'
 });

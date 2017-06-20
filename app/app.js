@@ -1,18 +1,19 @@
 import Ember from 'ember';
 import Resolver from './resolver';
-import loadInitializers from 'ember/load-initializers';
+import loadInitializers from 'ember-load-initializers';
 import config from './config/environment';
+import './models/custom-inflector-rules';
 
 let App;
 
 Ember.MODEL_FACTORY_INJECTIONS = true;
 
 App = Ember.Application.extend({
-modulePrefix: config.modulePrefix,
+  modulePrefix: config.modulePrefix,
   podModulePrefix: config.podModulePrefix,
-Resolver
+  Resolver
 });
 
 loadInitializers(App, config.modulePrefix);
 
-export default App; 
+export default App;

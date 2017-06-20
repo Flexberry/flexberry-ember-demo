@@ -1,0 +1,311 @@
+﻿{
+  "name": "FlexberryEmberDemoApplicationUser",
+  "modelName": "flexberry-ember-demo-application-user",
+  "className": "ApplicationUser",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "name",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": true,
+      "defaultValue": "",
+      "stored": true
+    },
+    {
+      "name": "login",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": true,
+      "defaultValue": "",
+      "stored": true
+    },
+    {
+      "name": "eMail",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": true,
+      "defaultValue": "",
+      "stored": true
+    },
+    {
+      "name": "phone1",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    },
+    {
+      "name": "phone2",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    },
+    {
+      "name": "phone3",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    },
+    {
+      "name": "activated",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    },
+    {
+      "name": "vK",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    },
+    {
+      "name": "facebook",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    },
+    {
+      "name": "twitter",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    },
+    {
+      "name": "birthday",
+      "type": "date",
+      "flexberryType": "NullableDateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    },
+    {
+      "name": "gender",
+      "type": "flexberry-ember-demo-gender",
+      "flexberryType": "Gender",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    },
+    {
+      "name": "vip",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    },
+    {
+      "name": "karma",
+      "type": "decimal",
+      "flexberryType": "decimal",
+      "notNull": false,
+      "defaultValue": "100",
+      "stored": true
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ApplicationUserE",
+      "modelName": "flexberry-ember-demo-application-user",
+      "attrs": [
+        {
+          "name": "name",
+          "caption": "Имя",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "login",
+          "caption": "Логин",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "eMail",
+          "caption": "E mail",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "phone1",
+          "caption": "Номер телефона 1",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "phone2",
+          "caption": "Номер телефона 2",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "phone3",
+          "caption": "Номер телефона 3",
+          "hidden": false,
+          "index": 5
+        },
+        {
+          "name": "activated",
+          "caption": "Активен",
+          "hidden": false,
+          "index": 6
+        },
+        {
+          "name": "vK",
+          "caption": "VK",
+          "hidden": false,
+          "index": 7
+        },
+        {
+          "name": "facebook",
+          "caption": "Facebook",
+          "hidden": false,
+          "index": 8
+        },
+        {
+          "name": "twitter",
+          "caption": "Twitter",
+          "hidden": false,
+          "index": 9
+        },
+        {
+          "name": "birthday",
+          "caption": "Дата рождения",
+          "hidden": false,
+          "index": 10
+        },
+        {
+          "name": "gender",
+          "caption": "Пол",
+          "hidden": false,
+          "index": 11
+        },
+        {
+          "name": "vip",
+          "caption": "VIP",
+          "hidden": false,
+          "index": 12
+        },
+        {
+          "name": "karma",
+          "caption": "Карма",
+          "hidden": false,
+          "index": 13
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "ApplicationUserL",
+      "modelName": "flexberry-ember-demo-application-user",
+      "attrs": [
+        {
+          "name": "name",
+          "caption": "Имя",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "eMail",
+          "caption": "E mail",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "birthday",
+          "caption": "Дата рождения",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "gender",
+          "caption": "Пол",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "vip",
+          "caption": "VIP",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "karma",
+          "caption": "Карма",
+          "hidden": false,
+          "index": 5
+        },
+        {
+          "name": "phone1",
+          "caption": "",
+          "hidden": true,
+          "index": 6
+        },
+        {
+          "name": "vK",
+          "caption": "",
+          "hidden": true,
+          "index": 7
+        },
+        {
+          "name": "facebook",
+          "caption": "",
+          "hidden": true,
+          "index": 8
+        },
+        {
+          "name": "twitter",
+          "caption": "",
+          "hidden": true,
+          "index": 9
+        },
+        {
+          "name": "activated",
+          "caption": "",
+          "hidden": true,
+          "index": 10
+        },
+        {
+          "name": "phone2",
+          "caption": "",
+          "hidden": true,
+          "index": 11
+        },
+        {
+          "name": "phone3",
+          "caption": "",
+          "hidden": true,
+          "index": 12
+        },
+        {
+          "name": "login",
+          "caption": "",
+          "hidden": true,
+          "index": 13
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true
+}

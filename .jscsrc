@@ -1,4 +1,5 @@
 {
+  "excludeFiles": [ "tests/unit/models/*", "modules/ember-flexberry-gis/**" ],
   "esnext": true,
   "preset": "airbnb",
   "requirePaddingNewLinesAfterBlocks": {

@@ -1,0 +1,13 @@
+﻿{
+  "propertyLookup": [],
+  "caption": "Локализация",
+  "name": "FlexberryEmberDemoLocalizationE",
+  "className": "LocalizationE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "flexberry-ember-demo-localization",
+      "modelProjection": "LocalizationE"
+    }
+  ]
+}

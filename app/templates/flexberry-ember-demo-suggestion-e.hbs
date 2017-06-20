@@ -1,68 +1,80 @@
-<h3 class="ui header">{{title}} - edit form</h3>
+<h3 class="ui header">{{t 'forms.flexberry-ember-demo-suggestion-e.caption'}}</h3>
 
 {{#if errorMessages}}
-{{#each errorMessages as |currentError|}}
-{{
-ui-message
-type='error'
-closeable=true
-visible=true
-title='Error occurred'
-message=currentError
-}}
-{{/each}}
+  {{#each errorMessages as |currentError|}}
+    {{ui-message
+      type='error'
+      closeable=true
+      visible=true
+      title='Error occurred'
+      message=currentError
+    }}
+  {{/each}}
 {{/if}}
-<form class="ui form flexberry-vertical-form" role="form">
+<form class="ui {{state}} form flexberry-vertical-form" role="form">
+  <div class="field">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=model.errors}}
+    </div>
+  </div>
   <div class="field">
     <div class="flexberry-edit-panel">
       {{#unless readonly}}
-      <button type="submit" class="ui positive button" {{action 'save'}}>Save</button>
-      {{#unless model.isNew}}
-      <button type="submit" class="ui negative button" {{action 'delete'}}>Delete</button>
+        <button type="submit" class="ui positive button" {{action 'save'}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button type="submit" class="ui negative button" {{action 'delete'}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
       {{/unless}}
-      {{/unless}}
-      <button type="submit" class="ui button" {{action 'close'}}>Close</button>
+      <button type="submit" class="ui button" {{action 'close'}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
     </div>
   </div>
-<div class="field">
-  {{#if model.errors.address}}
-    <span style ="color:red">
-      {{model.errors.address}}
-    </span>
-  {{/if}}
+  <div class="field">
   {{
-  flexberry-field
-  placeholder='(no value)'
-  readonly=readonly
-  required=true
-  value=model.address
-  class=(if model.errors.address 'error' '')
-  label='Address'
+    flexberry-field
+    placeholder=(t 'components.flexberry-field.placeholder')
+    readonly=readonly
+    required=true
+    value=model.address
+    class=(if model.errors.address 'error' '')
+    label=(t 'forms.flexberry-ember-demo-suggestion-e.address-caption')
   }}
+  {{flexberry-validationmessage error=model.errors.address pointing="pointing"}}
 </div>
 
 <div class="field">
-  {{#if model.errors.text}}
-    <span style ="color:red">
-      {{model.errors.text}}
-    </span>
-  {{/if}}
   {{
-  flexberry-field
-  placeholder='(no value)'
-  readonly=readonly
-  required=true
-  value=model.text
-  class=(if model.errors.text 'error' '')
-  label='Text'
+    flexberry-field
+    placeholder=(t 'components.flexberry-field.placeholder')
+    readonly=readonly
+    required=true
+    value=model.text
+    class=(if model.errors.text 'error' '')
+    label=(t 'forms.flexberry-ember-demo-suggestion-e.text-caption')
   }}
+  {{flexberry-validationmessage error=model.errors.text pointing="pointing"}}
 </div>
 
 <div class="field">
-  <label>Date</label>
-  {{#if model.errors.date}}
-    <span style="color:red">{{model.errors.date}}</span>
-  {{/if}}
+  {{
+    flexberry-field
+    placeholder=(t 'components.flexberry-field.placeholder')
+    readonly=readonly
+    required=true
+    value=model.polygon
+    class=(if model.errors.polygon 'error' '')
+    label=(t 'forms.flexberry-ember-demo-suggestion-e.polygon-caption')
+  }}
+  {{flexberry-validationmessage error=model.errors.polygon pointing="pointing"}}
+</div>
+
+<div class="field">
+  <label>{{t 'forms.flexberry-ember-demo-suggestion-e.date-caption'}}</label>
   {{
     flexberry-datepicker
     placeholder='(no value)'
@@ -70,153 +82,104 @@ message=currentError
     value=model.date
     class=(if model.errors.date 'error' '')
   }}
+  {{flexberry-validationmessage error=model.errors.date pointing="pointing"}}
 </div>
 
 <div class="field">
-  {{#if model.errors.votes}}
-    <span style ="color:red">
-      {{model.errors.votes}}
-    </span>
-  {{/if}}
   {{
-  flexberry-field
-  placeholder='(no value)'
-  readonly=readonly
-  required=true
-  value=model.votes
-  class=(if model.errors.votes 'error' '')
-  label='Votes'
+    flexberry-field
+    placeholder=(t 'components.flexberry-field.placeholder')
+    readonly=readonly
+    required=true
+    value=model.votes
+    class=(if model.errors.votes 'error' '')
+    label=(t 'forms.flexberry-ember-demo-suggestion-e.votes-caption')
   }}
+  {{flexberry-validationmessage error=model.errors.votes pointing="pointing"}}
 </div>
 
 <div class="field">
-  {{#if model.errors.moderated}}
-    <span style="color:red">{{model.errors.moderated}}</span>
-  {{/if}}
-  {{flexberry-checkbox readonly=readonly checked=model.moderated}}
+  <label>{{t 'forms.flexberry-ember-demo-suggestion-e.moderated-caption'}}</label>
+  {{
+    flexberry-checkbox 
+    readonly=readonly 
+    value=model.moderated
+  }}
+  {{flexberry-validationmessage error=model.errors.moderated pointing="pointing"}}
 </div>
 
 <div class="field">
-  <label>Type</label>
-  {{#if model.errors.type}}
-    <span style="color:red">{{model.errors.type}}</span>
-  {{/if}}
-      {{
+  <label>{{t 'forms.flexberry-ember-demo-suggestion-e.type-caption'}}</label>
+  {{
     flexberry-lookup
     choose='showLookupDialog'
     remove='removeLookupValue'
-    value=null
+    value=model.type
+    displayAttributeName='name'
     relationName='type'
     projection='SuggestionTypeL'
-    title='Type'
+    title=(t 'forms.flexberry-ember-demo-suggestion-e.type-caption')
     readonly=readonly
-    limitFunction=null
-    class=(if model.errors.type 'error' '')
-}}
-</div>
-
-<div class="field">
-  {{#if model.errors.type.name}}
-    <span style ="color:red">
-      {{model.errors.type.name}}
-    </span>
-  {{/if}}
-  {{
-  flexberry-field
-  placeholder='(no value)'
-  readonly=readonly
-  required=true
-  value=model.type.name
-  class=(if model.errors.type.name 'error' '')
-  label='Name'
   }}
+  {{flexberry-validationmessage error=model.errors.type pointing="pointing"}}
 </div>
 
 <div class="field">
-  <label>Author</label>
-  {{#if model.errors.author}}
-    <span style="color:red">{{model.errors.author}}</span>
-  {{/if}}
-      {{
+  <label>{{t 'forms.flexberry-ember-demo-suggestion-e.author-caption'}}</label>
+  {{
     flexberry-lookup
     choose='showLookupDialog'
     remove='removeLookupValue'
-    value=null
+    value=model.author
+    displayAttributeName='name'
     relationName='author'
     projection='ApplicationUserL'
-    title='Author'
+    title=(t 'forms.flexberry-ember-demo-suggestion-e.author-caption')
     readonly=readonly
-    limitFunction=null
-    class=(if model.errors.author 'error' '')
-}}
-</div>
-
-<div class="field">
-  {{#if model.errors.author.name}}
-    <span style ="color:red">
-      {{model.errors.author.name}}
-    </span>
-  {{/if}}
-  {{
-  flexberry-field
-  placeholder='(no value)'
-  readonly=readonly
-  required=true
-  value=model.author.name
-  class=(if model.errors.author.name 'error' '')
-  label='Name'
   }}
+  {{flexberry-validationmessage error=model.errors.author pointing="pointing"}}
 </div>
 
 <div class="field">
-  <label>Comments</label>
-  {{#if model.errors.comments}}
-    <span style="color:red">{{model.errors.comments}}</span>
-  {{/if}}
+  <label>{{t 'forms.flexberry-ember-demo-suggestion-e.comments-caption'}}</label>
   {{
     flexberry-groupedit
     componentName="commentsGroupEdit"
-    class="attached"
     modelProjection=modelProjection.attributes.comments
     content=model.comments
     readonly=readonly
     orderable=false
     class=(if model.errors.comments 'error' '')
-}}
+  }}
+  {{flexberry-validationmessage error=model.errors.comments pointing="pointing"}}
 </div>
 
 <div class="field">
-  <label>Files</label>
-  {{#if model.errors.files}}
-    <span style="color:red">{{model.errors.files}}</span>
-  {{/if}}
+  <label>{{t 'forms.flexberry-ember-demo-suggestion-e.files-caption'}}</label>
   {{
     flexberry-groupedit
     componentName="filesGroupEdit"
-    class="attached"
     modelProjection=modelProjection.attributes.files
     content=model.files
     readonly=readonly
     orderable=false
     class=(if model.errors.files 'error' '')
-}}
+  }}
+  {{flexberry-validationmessage error=model.errors.files pointing="pointing"}}
 </div>
 
 <div class="field">
-  <label>User votes</label>
-  {{#if model.errors.userVotes}}
-    <span style="color:red">{{model.errors.userVotes}}</span>
-  {{/if}}
+  <label>{{t 'forms.flexberry-ember-demo-suggestion-e.userVotes-caption'}}</label>
   {{
     flexberry-groupedit
     componentName="userVotesGroupEdit"
-    class="attached"
     modelProjection=modelProjection.attributes.userVotes
     content=model.userVotes
     readonly=readonly
     orderable=false
     class=(if model.errors.userVotes 'error' '')
-}}
+  }}
+  {{flexberry-validationmessage error=model.errors.userVotes pointing="pointing"}}
 </div>
 
 </form>

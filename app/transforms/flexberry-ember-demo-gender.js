@@ -1,6 +1,7 @@
-import FlexberryEnum from 'ember-flexberry/transforms/flexberry-enum';
-import GenderEnum from '../enums/gender';
+import FlexberryEnum from 'ember-flexberry-data/transforms/flexberry-enum';
+import GenderEnum from '../enums/flexberry-ember-demo-gender';
 
 export default FlexberryEnum.extend({
-      enum: GenderEnum
+  enum: GenderEnum,
+  sourceType: 'FlexberryEmberDemo.Gender'
 });

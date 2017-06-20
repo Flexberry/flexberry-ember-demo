@@ -1,0 +1,43 @@
+﻿{
+  "applicationCaption": "Flexberry ember demo",
+  "applicationTitle": "Flexberry ember demo",
+  "items": [
+    {
+      "link": null,
+      "menuName": "flexberry-ember-demo",
+      "caption": "FlexberryEmberDemo",
+      "title": "FlexberryEmberDemo",
+      "children": [
+        {
+          "link": "flexberry-ember-demo-suggestion-type-l",
+          "menuName": null,
+          "caption": "Suggestion type",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "flexberry-ember-demo-application-user-l",
+          "menuName": null,
+          "caption": "Application user",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "flexberry-ember-demo-localization-l",
+          "menuName": null,
+          "caption": "Localization",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "flexberry-ember-demo-suggestion-l",
+          "menuName": null,
+          "caption": "Suggestion",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

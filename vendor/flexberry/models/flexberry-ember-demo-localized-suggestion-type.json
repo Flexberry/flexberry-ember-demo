@@ -1,0 +1,73 @@
+﻿{
+  "name": "FlexberryEmberDemoLocalizedSuggestionType",
+  "modelName": "flexberry-ember-demo-localized-suggestion-type",
+  "className": "LocalizedSuggestionType",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "name",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": true,
+      "defaultValue": "",
+      "stored": true
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "localization",
+      "relatedTo": "flexberry-ember-demo-localization",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "suggestionType",
+      "relatedTo": "flexberry-ember-demo-suggestion-type",
+      "inverse": "localizedTypes"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "LocalizedSuggestionTypeE",
+      "modelName": "flexberry-ember-demo-localized-suggestion-type",
+      "attrs": [
+        {
+          "name": "name",
+          "caption": "Название",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Name",
+          "lookupValueField": "name",
+          "relationName": "Localization",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "Name",
+              "hidden": true,
+              "index": 2
+            }
+          ],
+          "index": 1,
+          "caption": "Локализация",
+          "name": "localization",
+          "relatedTo": "flexberry-ember-demo-localization",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true
+}

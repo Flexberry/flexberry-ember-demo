@@ -1,12 +1,9 @@
-import ApplicationSerializer from './application';
+import { Serializer as VoteSerializer } from
+  '../mixins/regenerated/serializers/flexberry-ember-demo-vote';
+import __ApplicationSerializer from './application';
 
-// TODO: ODataSerializer.extend
-export default ApplicationSerializer.extend({
-attrs: {
-applicationUser: { serialize: 'odata-id', deserialize: 'records' },
-suggestion: { serialize: 'odata-id', deserialize: 'records' }
-},
-/**
+export default __ApplicationSerializer.extend(VoteSerializer, {
+  /**
   * Field name where object identifier is kept.
   */
   primaryKey: '__PrimaryKey'

@@ -1,0 +1,51 @@
+﻿{
+  "name": "FlexberryEmberDemoLocalization",
+  "modelName": "flexberry-ember-demo-localization",
+  "className": "Localization",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "name",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": true,
+      "defaultValue": "",
+      "stored": true
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "LocalizationE",
+      "modelName": "flexberry-ember-demo-localization",
+      "attrs": [
+        {
+          "name": "name",
+          "caption": "Название",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    },
+    {
+      "name": "LocalizationL",
+      "modelName": "flexberry-ember-demo-localization",
+      "attrs": [
+        {
+          "name": "name",
+          "caption": "Название",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true
+}

@@ -1,0 +1,115 @@
+﻿{
+  "name": "FlexberryEmberDemoComment",
+  "modelName": "flexberry-ember-demo-comment",
+  "className": "Comment",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "text",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    },
+    {
+      "name": "votes",
+      "type": "number",
+      "flexberryType": "long",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    },
+    {
+      "name": "moderated",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "author",
+      "relatedTo": "flexberry-ember-demo-application-user",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "suggestion",
+      "relatedTo": "flexberry-ember-demo-suggestion",
+      "inverse": "comments"
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "userVotes",
+      "relatedTo": "flexberry-ember-demo-comment-vote",
+      "inverse": "comment"
+    }
+  ],
+  "projections": [
+    {
+      "name": "CommentE",
+      "modelName": "flexberry-ember-demo-comment",
+      "attrs": [
+        {
+          "name": "text",
+          "caption": "Текст",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "votes",
+          "caption": "Голоса",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "moderated",
+          "caption": "Одобрен",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Name",
+          "lookupValueField": "name",
+          "relationName": "Author",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "Name",
+              "hidden": true,
+              "index": 4
+            }
+          ],
+          "index": 3,
+          "caption": "Автор",
+          "name": "author",
+          "relatedTo": "flexberry-ember-demo-application-user",
+          "inverse": null
+        }
+      ],
+      "hasMany": [
+        {
+          "projectionName": "CommentVoteE",
+          "caption": "Голоса пользователей",
+          "name": "userVotes",
+          "relatedTo": "flexberry-ember-demo-comment-vote",
+          "inverse": null
+        }
+      ]
+    }
+  ],
+  "stored": true,
+  "offline": true
+}

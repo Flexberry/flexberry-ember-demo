@@ -1,0 +1,14 @@
+﻿{
+  "newForm": "flexberry-ember-demo-application-user-e",
+  "editForm": "flexberry-ember-demo-application-user-e",
+  "caption": "Пользователь приложения",
+  "name": "FlexberryEmberDemoApplicationUserL",
+  "className": "ApplicationUserL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "flexberry-ember-demo-application-user",
+      "modelProjection": "ApplicationUserL"
+    }
+  ]
+}

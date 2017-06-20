@@ -1,0 +1,51 @@
+﻿{
+  "name": "FlexberryEmberDemoOfflineUser",
+  "modelName": "flexberry-ember-demo-offline-user",
+  "className": "OfflineUser",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "login",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": false
+    },
+    {
+      "name": "password",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "OfflineUserE",
+      "modelName": "flexberry-ember-demo-offline-user",
+      "attrs": [
+        {
+          "name": "login",
+          "caption": "Логин",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "password",
+          "caption": "Пароль",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": false,
+  "offline": true
+}

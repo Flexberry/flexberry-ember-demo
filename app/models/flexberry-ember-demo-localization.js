@@ -1,19 +1,9 @@
-import DS from 'ember-data';
-import BaseModel from 'ember-flexberry/models/base';
-import Proj from 'ember-flexberry-data';
+import { Model as LocalizationMixin, defineProjections } from
+  '../mixins/regenerated/models/flexberry-ember-demo-localization';
+import { Projection } from 'ember-flexberry-data';
+import { Offline } from 'ember-flexberry-data';
+let Model = Projection.Model.extend(Offline.ModelMixin, LocalizationMixin, {
 
-var Model = BaseModel.extend({
-name: DS.attr('string'),
- validations: {
- name: { presence: true }
- }
 });
-
-Model.defineProjection('LocalizationE', 'flexberry-ember-demo-localization', {
-name: Proj.attr('Name')
-});
- Model.defineProjection('LocalizationL', 'flexberry-ember-demo-localization', {
-name: Proj.attr('Name')
-});
-
+defineProjections(Model);
 export default Model;

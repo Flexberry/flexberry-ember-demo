@@ -1,4 +1,12 @@
 import ListFormController from 'ember-flexberry/controllers/list-form';
 
-var FlexberryEmberDemoLocalizationLController = ListFormController;
-export default FlexberryEmberDemoLocalizationLController; 
+export default ListFormController.extend({
+  /**
+    Name of related edit form route.
+
+    @property editFormRoute
+    @type String
+    @default 'flexberry-ember-demo-localization-e'
+   */
+  editFormRoute: 'flexberry-ember-demo-localization-e'
+});

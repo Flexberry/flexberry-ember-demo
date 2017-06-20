@@ -1,15 +1,9 @@
-import ApplicationSerializer from './application';
+import { Serializer as SuggestionSerializer } from
+  '../mixins/regenerated/serializers/flexberry-ember-demo-suggestion';
+import __ApplicationSerializer from './application';
 
-// TODO: ODataSerializer.extend
-export default ApplicationSerializer.extend({
-attrs: {
-type: { serialize: 'odata-id', deserialize: 'records' },
-author: { serialize: 'odata-id', deserialize: 'records' },
-comments: { serialize: false, deserialize: 'records' },
-files: { serialize: false, deserialize: 'records' },
-userVotes: { serialize: false, deserialize: 'records' }
-},
-/**
+export default __ApplicationSerializer.extend(SuggestionSerializer, {
+  /**
   * Field name where object identifier is kept.
   */
   primaryKey: '__PrimaryKey'

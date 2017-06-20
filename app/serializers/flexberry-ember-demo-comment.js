@@ -1,13 +1,9 @@
-import ApplicationSerializer from './application';
+import { Serializer as CommentSerializer } from
+  '../mixins/regenerated/serializers/flexberry-ember-demo-comment';
+import __ApplicationSerializer from './application';
 
-// TODO: ODataSerializer.extend
-export default ApplicationSerializer.extend({
-attrs: {
-author: { serialize: 'odata-id', deserialize: 'records' },
-suggestion: { serialize: 'odata-id', deserialize: 'records' },
-userVotes: { serialize: false, deserialize: 'records' }
-},
-/**
+export default __ApplicationSerializer.extend(CommentSerializer, {
+  /**
   * Field name where object identifier is kept.
   */
   primaryKey: '__PrimaryKey'

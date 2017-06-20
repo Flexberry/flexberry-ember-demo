@@ -1,0 +1,54 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Type",
+      "projection": "SuggestionTypeL",
+      "detailModelName": null
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Author",
+      "projection": "ApplicationUserL",
+      "detailModelName": null
+    },
+    {
+      "master": "author",
+      "displayAttributeName": "name",
+      "required": true,
+      "relationName": "Comments.Author",
+      "projection": "ApplicationUserL",
+      "detailModelName": "flexberry-ember-demo-comment"
+    },
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Comments.UserVotes.ApplicationUser",
+      "projection": "ApplicationUserL",
+      "detailModelName": null
+    },
+    {
+      "master": "applicationUser",
+      "displayAttributeName": "name",
+      "required": true,
+      "relationName": "UserVotes.ApplicationUser",
+      "projection": "ApplicationUserL",
+      "detailModelName": "flexberry-ember-demo-vote"
+    }
+  ],
+  "caption": "Предложение",
+  "name": "FlexberryEmberDemoSuggestionE",
+  "className": "SuggestionE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "flexberry-ember-demo-suggestion",
+      "modelProjection": "SuggestionE"
+    }
+  ]
+}

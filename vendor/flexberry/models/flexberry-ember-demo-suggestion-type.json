@@ -1,0 +1,128 @@
+﻿{
+  "name": "FlexberryEmberDemoSuggestionType",
+  "modelName": "flexberry-ember-demo-suggestion-type",
+  "className": "SuggestionType",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "name",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": true,
+      "defaultValue": "",
+      "stored": true
+    },
+    {
+      "name": "moderated",
+      "type": "boolean",
+      "flexberryType": "bool",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": false,
+      "name": "parent",
+      "relatedTo": "flexberry-ember-demo-suggestion-type",
+      "inverse": null
+    }
+  ],
+  "hasMany": [
+    {
+      "name": "localizedTypes",
+      "relatedTo": "flexberry-ember-demo-localized-suggestion-type",
+      "inverse": "suggestionType"
+    }
+  ],
+  "projections": [
+    {
+      "name": "SuggestionTypeE",
+      "modelName": "flexberry-ember-demo-suggestion-type",
+      "attrs": [
+        {
+          "name": "name",
+          "caption": "Название",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "moderated",
+          "caption": "Одобрено",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Name",
+          "lookupValueField": "name",
+          "relationName": "Parent",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "Name",
+              "hidden": true,
+              "index": 3
+            }
+          ],
+          "index": 2,
+          "caption": "Родитель",
+          "name": "parent",
+          "relatedTo": "flexberry-ember-demo-suggestion-type",
+          "inverse": null
+        }
+      ],
+      "hasMany": [
+        {
+          "projectionName": "LocalizedSuggestionTypeE",
+          "caption": "Локализованные типы",
+          "name": "localizedTypes",
+          "relatedTo": "flexberry-ember-demo-localized-suggestion-type",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "SuggestionTypeL",
+      "modelName": "flexberry-ember-demo-suggestion-type",
+      "attrs": [
+        {
+          "name": "name",
+          "caption": "Название",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "moderated",
+          "caption": "Одобрено",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Parent",
+          "belongsTo": [],
+          "hidden": true,
+          "attrs": [],
+          "index": 2,
+          "caption": "Name",
+          "name": "parent",
+          "relatedTo": "flexberry-ember-demo-suggestion-type",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true
+}

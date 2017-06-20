@@ -1,0 +1,9 @@
+﻿{
+  "nameSpace": "FlexberryEmberDemo",
+  "className": "Gender",
+  "enumObjects": {
+    "Male": "Мужчина",
+    "Female": "Женщина",
+    "Unknown": "Неизвестно"
+  }
+}

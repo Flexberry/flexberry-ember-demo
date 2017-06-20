@@ -1,0 +1,59 @@
+﻿{
+  "name": "FlexberryEmberDemoSuggestionFile",
+  "modelName": "flexberry-ember-demo-suggestion-file",
+  "className": "SuggestionFile",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "order",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    },
+    {
+      "name": "file",
+      "type": "file",
+      "flexberryType": "WebFile",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "suggestion",
+      "relatedTo": "flexberry-ember-demo-suggestion",
+      "inverse": "files"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "SuggestionFileE",
+      "modelName": "flexberry-ember-demo-suggestion-file",
+      "attrs": [
+        {
+          "name": "order",
+          "caption": "Порядок",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "file",
+          "caption": "Файл",
+          "hidden": false,
+          "index": 1
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true
+}
