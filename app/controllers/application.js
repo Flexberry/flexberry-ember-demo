@@ -52,7 +52,7 @@ export default Ember.Controller.extend({
   init() {
     this._super(...arguments);
 
-    this.set('onlineStatus', false);
+    this.set('onlineStatus', true);
     let i18n = this.get('i18n');
     if (Ember.isNone(i18n)) {
       return;

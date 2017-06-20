@@ -73,6 +73,6 @@ export default Offline.Store.reopen(Projection.StoreMixin, {
 
   offlineModels: {
     'new-platform-flexberry-flexberry-user-setting': true,
-    'offline-user': true
+    'flexberry-ember-demo-offline-user': true
   }
 });
