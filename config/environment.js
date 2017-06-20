@@ -1,7 +1,13 @@
 /* jshint node: true */
 
 module.exports = function(environment) {
-  var backendUrl = 'http://localhost:6500';
+  var backendUrl = 'https://flexberry-ember-dummy.azurewebsites.net';
+
+  if (environment === 'development-loc') {
+    // Use `ember s -e development-loc` command for local backend usage.
+    backendUrl = 'http://localhost:6500';
+  }
+
   var ENV = {
     modulePrefix: 'ember-app',
     environment: environment,
