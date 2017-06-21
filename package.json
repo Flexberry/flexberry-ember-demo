@@ -41,7 +41,7 @@
     "ember-data": "~2.4.3",
     "ember-export-application-global": "^1.0.5",
     "ember-flexberry": "git+https://github.com/Flexberry/ember-flexberry.git#cec3bda1afa672097fea4086fba4daa62b4e2c39",
-    "ember-flexberry-gis": "git://github.com/flexberry/ember-flexberry-gis.git#23a1c190d31bf70205df21853b49246f702ca3d6",
+    "ember-flexberry-gis": "git://github.com/flexberry/ember-flexberry-gis.git#release-0.1.0",
     "ember-link-action": "0.0.34",
     "ember-load-initializers": "^0.5.1",
     "ember-moment": "6.0.0",
