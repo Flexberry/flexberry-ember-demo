@@ -66,7 +66,7 @@ export default BaseLayer.extend({
 
     let features = Ember.A(Ember.get(featureCollection, 'features') || []);
     if (Ember.get(features, 'length') === 0) {
-      return L.geoJSON({}, options);
+      return L.geoJSON();
     }
 
     let layerFunctions = this.get('layerFunctions');
