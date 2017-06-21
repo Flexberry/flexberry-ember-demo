@@ -27,5 +27,8 @@
     "seiyria-bootstrap-slider": "~6.0.6",
     "js-beautify": "1.6.4",
     "jquery-minicolors": "2.2.6"
+  },
+  "resolutions": {
+    "semantic-ui": "fixed-abort"
   }
 }
