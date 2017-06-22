@@ -1,0 +1,34 @@
+{
+  "name": "ember-app",
+  "dependencies": {
+    "ember": "~2.4.3",
+    "ember-cli-shims": "0.1.1",
+    "ember-cli-test-loader": "0.2.2",
+    "ember-qunit-notifications": "0.1.0",
+    "semantic-ui-daterangepicker": "5d46ed2e6e5a0bf398bb6a5df82e06036dfc46be",
+    "flatpickr-calendar": "git://github.com/chmln/flatpickr.git#2.3.4",
+    "blueimp-file-upload": "9.11.2",
+    "devicejs": "0.2.7",
+    "semantic-ui": "git://github.com/Flexberry/Semantic-UI.git#fixed-abort",
+    "leaflet": "1.0.1",
+    "proj4leaflet": "1.0.1",
+    "Leaflet-WFST": "develop",
+    "leaflet.wms": "gh-pages",
+    "leaflet.editable": "master",
+    "leaflet-history": "https://github.com/Flexberry/leaflet-history.git#d67e852ae405a0ca2f6cd069d2f0ff048d7a5ce8",
+    "leaflet-editable-measures": "0.1.0",
+    "html2canvas": "master",
+    "leaflet-export": "0.1.0",
+    "leaflet-switch-scale-control": "0.1.0",
+    "Leaflet.zoomslider": "https://github.com/Flexberry/Leaflet.zoomslider.git#leaflet-1.0.1",
+    "leaflet-minimap": "3.4.0",
+    "osmtogeojson": "2.2.12",
+    "ows.js": "0.1.5",
+    "seiyria-bootstrap-slider": "~6.0.6",
+    "js-beautify": "1.6.4",
+    "jquery-minicolors": "2.2.6"
+  },
+  "resolutions": {
+    "semantic-ui": "fixed-abort"
+  }
+}

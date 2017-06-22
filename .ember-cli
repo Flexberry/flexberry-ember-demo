@@ -1,0 +1,5 @@
+{
+  "disableAnalytics": true,
+  "output-path": "../www",
+  "liveReload": false
+}

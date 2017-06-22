@@ -1,0 +1,73 @@
+﻿{
+  "name": "FlexberryEmberDemoCommentVote",
+  "modelName": "flexberry-ember-demo-comment-vote",
+  "className": "CommentVote",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "voteType",
+      "type": "flexberry-ember-demo-vote-type",
+      "flexberryType": "VoteType",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "applicationUser",
+      "relatedTo": "flexberry-ember-demo-application-user",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "comment",
+      "relatedTo": "flexberry-ember-demo-comment",
+      "inverse": "userVotes"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "CommentVoteE",
+      "modelName": "flexberry-ember-demo-comment-vote",
+      "attrs": [
+        {
+          "name": "voteType",
+          "caption": "Тип голосования",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Name",
+          "lookupValueField": "name",
+          "relationName": "ApplicationUser",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "Name",
+              "hidden": true,
+              "index": 2
+            }
+          ],
+          "index": 1,
+          "caption": "Пользователь приложения",
+          "name": "applicationUser",
+          "relatedTo": "flexberry-ember-demo-application-user",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true
+}

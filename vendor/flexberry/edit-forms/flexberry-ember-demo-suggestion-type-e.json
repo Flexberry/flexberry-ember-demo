@@ -1,0 +1,30 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Parent",
+      "projection": "SuggestionTypeL",
+      "detailModelName": null
+    },
+    {
+      "master": "localization",
+      "displayAttributeName": "name",
+      "required": true,
+      "relationName": "LocalizedTypes.Localization",
+      "projection": "LocalizationL",
+      "detailModelName": "flexberry-ember-demo-localized-suggestion-type"
+    }
+  ],
+  "caption": "Тип предложения",
+  "name": "FlexberryEmberDemoSuggestionTypeE",
+  "className": "SuggestionTypeE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "flexberry-ember-demo-suggestion-type",
+      "modelProjection": "SuggestionTypeE"
+    }
+  ]
+}

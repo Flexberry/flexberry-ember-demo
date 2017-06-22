@@ -1,0 +1,50 @@
+{{#map-tools/base
+  class=(concat flexberryClassNames.wrapper " " class)
+  name="draw-suggestion"
+  caption=caption
+  tooltip=tooltip
+  iconClass=iconClass
+}}
+  {{#block-slot "submenu"}}
+    {{#if drawMarker}}
+      {{map-tools/base
+        class=(concat flexberryClassNames.drawMarker " " drawMarkerClass)
+        name="draw-suggestion-marker"
+        caption=drawMarkerCaption
+        iconClass=drawMarkerIconClass
+        mapToolProperties=_drawToolProperties
+        activate=(action "onMapToolActivate")
+      }}
+    {{/if}}
+    {{#if drawPolyline}}
+      {{map-tools/base
+        class=(concat flexberryClassNames.drawPolyline " " drawPolylineClass)
+        name="draw-suggestion-polyline"
+        caption=drawPolylineCaption
+        iconClass=drawPolylineIconClass
+        mapToolProperties=_drawToolProperties
+        activate=(action "onMapToolActivate")
+      }}
+    {{/if}}
+    {{#if drawRectangle}}
+      {{map-tools/base
+        class=(concat flexberryClassNames.drawRectangle " " drawRectangleClass)
+        name="draw-suggestion-rectangle"
+        caption=drawRectangleCaption
+        iconClass=drawRectangleIconClass
+        mapToolProperties=_drawToolProperties
+        activate=(action "onMapToolActivate")
+      }}
+    {{/if}}
+    {{#if drawPolygon}}
+      {{map-tools/base
+        class=(concat flexberryClassNames.drawPolygon " " drawPolygonClass)
+        name="draw-suggestion-polygon"
+        caption=drawPolygonCaption
+        iconClass=drawPolygonIconClass
+        mapToolProperties=_drawToolProperties
+        activate=(action "onMapToolActivate")
+      }}
+    {{/if}}
+  {{/block-slot}}
+{{/map-tools/base}}

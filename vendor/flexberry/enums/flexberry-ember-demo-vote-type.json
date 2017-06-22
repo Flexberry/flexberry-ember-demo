@@ -1,0 +1,8 @@
+﻿{
+  "nameSpace": "FlexberryEmberDemo",
+  "className": "VoteType",
+  "enumObjects": {
+    "Like": "Лайк",
+    "Dislike": "Дизлайк"
+  }
+}

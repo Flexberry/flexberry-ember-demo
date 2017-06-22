@@ -1,0 +1,13 @@
+﻿{
+  "propertyLookup": [],
+  "caption": "Пользователь приложения",
+  "name": "FlexberryEmberDemoApplicationUserE",
+  "className": "ApplicationUserE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "flexberry-ember-demo-application-user",
+      "modelProjection": "ApplicationUserE"
+    }
+  ]
+}

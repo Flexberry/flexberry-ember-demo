@@ -1,0 +1,90 @@
+<h3 class="ui header">{{t 'forms.flexberry-ember-demo-suggestion-type-e.caption'}}</h3>
+
+{{#if errorMessages}}
+  {{#each errorMessages as |currentError|}}
+    {{ui-message
+      type='error'
+      closeable=true
+      visible=true
+      title='Error occurred'
+      message=currentError
+    }}
+  {{/each}}
+{{/if}}
+<form class="ui {{state}} form flexberry-vertical-form" role="form">
+  <div class="field">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=model.errors}}
+    </div>
+  </div>
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button type="submit" class="ui positive button" {{action 'save'}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button type="submit" class="ui negative button" {{action 'delete'}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button type="submit" class="ui button" {{action 'close'}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field">
+  {{
+    flexberry-field
+    placeholder=(t 'components.flexberry-field.placeholder')
+    readonly=readonly
+    required=true
+    value=model.name
+    class=(if model.errors.name 'error' '')
+    label=(t 'forms.flexberry-ember-demo-suggestion-type-e.name-caption')
+  }}
+  {{flexberry-validationmessage error=model.errors.name pointing="pointing"}}
+</div>
+
+<div class="field">
+  <label>{{t 'forms.flexberry-ember-demo-suggestion-type-e.moderated-caption'}}</label>
+  {{
+    flexberry-checkbox 
+    readonly=readonly 
+    value=model.moderated
+  }}
+  {{flexberry-validationmessage error=model.errors.moderated pointing="pointing"}}
+</div>
+
+<div class="field">
+  <label>{{t 'forms.flexberry-ember-demo-suggestion-type-e.parent-caption'}}</label>
+  {{
+    flexberry-lookup
+    choose='showLookupDialog'
+    remove='removeLookupValue'
+    value=model.parent
+    displayAttributeName='name'
+    relationName='parent'
+    projection='SuggestionTypeL'
+    title=(t 'forms.flexberry-ember-demo-suggestion-type-e.parent-caption')
+    readonly=readonly
+  }}
+  {{flexberry-validationmessage error=model.errors.parent pointing="pointing"}}
+</div>
+
+<div class="field">
+  <label>{{t 'forms.flexberry-ember-demo-suggestion-type-e.localizedTypes-caption'}}</label>
+  {{
+    flexberry-groupedit
+    componentName="localizedTypesGroupEdit"
+    modelProjection=modelProjection.attributes.localizedTypes
+    content=model.localizedTypes
+    readonly=readonly
+    orderable=false
+    class=(if model.errors.localizedTypes 'error' '')
+  }}
+  {{flexberry-validationmessage error=model.errors.localizedTypes pointing="pointing"}}
+</div>
+
+</form>

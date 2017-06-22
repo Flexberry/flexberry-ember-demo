@@ -1,0 +1,4 @@
+import FlexberryEmberDemoSuggestionTypeEController from '../flexberry-ember-demo-suggestion-type-e';
+
+var FlexberryEmberDemoSuggestionTypeENewController = FlexberryEmberDemoSuggestionTypeEController;
+export default FlexberryEmberDemoSuggestionTypeENewController;

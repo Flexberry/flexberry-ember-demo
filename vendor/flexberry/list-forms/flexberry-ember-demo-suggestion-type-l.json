@@ -1,0 +1,14 @@
+﻿{
+  "newForm": "flexberry-ember-demo-suggestion-type-e",
+  "editForm": "flexberry-ember-demo-suggestion-type-e",
+  "caption": "Тип предложения",
+  "name": "FlexberryEmberDemoSuggestionTypeL",
+  "className": "SuggestionTypeL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "flexberry-ember-demo-suggestion-type",
+      "modelProjection": "SuggestionTypeL"
+    }
+  ]
+}

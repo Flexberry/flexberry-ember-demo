@@ -1,0 +1,210 @@
+<h3 class="ui header">{{t 'forms.flexberry-ember-demo-application-user-e.caption'}}</h3>
+
+{{#if errorMessages}}
+  {{#each errorMessages as |currentError|}}
+    {{ui-message
+      type='error'
+      closeable=true
+      visible=true
+      title='Error occurred'
+      message=currentError
+    }}
+  {{/each}}
+{{/if}}
+<form class="ui {{state}} form flexberry-vertical-form" role="form">
+  <div class="field">
+    <div class="sixteen wide">
+      {{flexberry-validationsummary errors=model.errors}}
+    </div>
+  </div>
+  <div class="field">
+    <div class="flexberry-edit-panel">
+      {{#unless readonly}}
+        <button type="submit" class="ui positive button" {{action 'save'}}>
+          {{t "forms.edit-form.save-button-text"}}
+        </button>
+        {{#unless model.isNew}}
+          <button type="submit" class="ui negative button" {{action 'delete'}}>
+            {{t "forms.edit-form.delete-button-text"}}
+          </button>
+        {{/unless}}
+      {{/unless}}
+      <button type="submit" class="ui button" {{action 'close'}}>
+        {{t "forms.edit-form.close-button-text"}}
+      </button>
+    </div>
+  </div>
+  <div class="field">
+  {{
+    flexberry-field
+    placeholder=(t 'components.flexberry-field.placeholder')
+    readonly=readonly
+    required=true
+    value=model.name
+    class=(if model.errors.name 'error' '')
+    label=(t 'forms.flexberry-ember-demo-application-user-e.name-caption')
+  }}
+  {{flexberry-validationmessage error=model.errors.name pointing="pointing"}}
+</div>
+
+<div class="field">
+  {{
+    flexberry-field
+    placeholder=(t 'components.flexberry-field.placeholder')
+    readonly=readonly
+    required=true
+    value=model.login
+    class=(if model.errors.login 'error' '')
+    label=(t 'forms.flexberry-ember-demo-application-user-e.login-caption')
+  }}
+  {{flexberry-validationmessage error=model.errors.login pointing="pointing"}}
+</div>
+
+<div class="field">
+  {{
+    flexberry-field
+    placeholder=(t 'components.flexberry-field.placeholder')
+    readonly=readonly
+    required=true
+    value=model.eMail
+    class=(if model.errors.eMail 'error' '')
+    label=(t 'forms.flexberry-ember-demo-application-user-e.eMail-caption')
+  }}
+  {{flexberry-validationmessage error=model.errors.eMail pointing="pointing"}}
+</div>
+
+<div class="field">
+  {{
+    flexberry-field
+    placeholder=(t 'components.flexberry-field.placeholder')
+    readonly=readonly
+    required=true
+    value=model.phone1
+    class=(if model.errors.phone1 'error' '')
+    label=(t 'forms.flexberry-ember-demo-application-user-e.phone1-caption')
+  }}
+  {{flexberry-validationmessage error=model.errors.phone1 pointing="pointing"}}
+</div>
+
+<div class="field">
+  {{
+    flexberry-field
+    placeholder=(t 'components.flexberry-field.placeholder')
+    readonly=readonly
+    required=true
+    value=model.phone2
+    class=(if model.errors.phone2 'error' '')
+    label=(t 'forms.flexberry-ember-demo-application-user-e.phone2-caption')
+  }}
+  {{flexberry-validationmessage error=model.errors.phone2 pointing="pointing"}}
+</div>
+
+<div class="field">
+  {{
+    flexberry-field
+    placeholder=(t 'components.flexberry-field.placeholder')
+    readonly=readonly
+    required=true
+    value=model.phone3
+    class=(if model.errors.phone3 'error' '')
+    label=(t 'forms.flexberry-ember-demo-application-user-e.phone3-caption')
+  }}
+  {{flexberry-validationmessage error=model.errors.phone3 pointing="pointing"}}
+</div>
+
+<div class="field">
+  <label>{{t 'forms.flexberry-ember-demo-application-user-e.activated-caption'}}</label>
+  {{
+    flexberry-checkbox 
+    readonly=readonly 
+    value=model.activated
+  }}
+  {{flexberry-validationmessage error=model.errors.activated pointing="pointing"}}
+</div>
+
+<div class="field">
+  {{
+    flexberry-field
+    placeholder=(t 'components.flexberry-field.placeholder')
+    readonly=readonly
+    required=true
+    value=model.vK
+    class=(if model.errors.vK 'error' '')
+    label=(t 'forms.flexberry-ember-demo-application-user-e.vK-caption')
+  }}
+  {{flexberry-validationmessage error=model.errors.vK pointing="pointing"}}
+</div>
+
+<div class="field">
+  {{
+    flexberry-field
+    placeholder=(t 'components.flexberry-field.placeholder')
+    readonly=readonly
+    required=true
+    value=model.facebook
+    class=(if model.errors.facebook 'error' '')
+    label=(t 'forms.flexberry-ember-demo-application-user-e.facebook-caption')
+  }}
+  {{flexberry-validationmessage error=model.errors.facebook pointing="pointing"}}
+</div>
+
+<div class="field">
+  {{
+    flexberry-field
+    placeholder=(t 'components.flexberry-field.placeholder')
+    readonly=readonly
+    required=true
+    value=model.twitter
+    class=(if model.errors.twitter 'error' '')
+    label=(t 'forms.flexberry-ember-demo-application-user-e.twitter-caption')
+  }}
+  {{flexberry-validationmessage error=model.errors.twitter pointing="pointing"}}
+</div>
+
+<div class="field">
+  <label>{{t 'forms.flexberry-ember-demo-application-user-e.birthday-caption'}}</label>
+  {{
+    flexberry-datepicker
+    placeholder='(no value)'
+    readonly=readonly
+    value=model.birthday
+    class=(if model.errors.birthday 'error' '')
+  }}
+  {{flexberry-validationmessage error=model.errors.birthday pointing="pointing"}}
+</div>
+
+<div class="field">
+  <label>{{t 'forms.flexberry-ember-demo-application-user-e.gender-caption'}}</label>
+  {{
+    flexberry-dropdown
+    items=(flexberry-enum 'flexberry-ember-demo-gender')
+    value=model.gender
+    readonly=readonly
+  }}
+  {{flexberry-validationmessage error=model.errors.gender pointing="pointing"}}
+</div>
+
+<div class="field">
+  <label>{{t 'forms.flexberry-ember-demo-application-user-e.vip-caption'}}</label>
+  {{
+    flexberry-checkbox 
+    readonly=readonly 
+    value=model.vip
+  }}
+  {{flexberry-validationmessage error=model.errors.vip pointing="pointing"}}
+</div>
+
+<div class="field">
+  {{
+    flexberry-field
+    placeholder=(t 'components.flexberry-field.placeholder')
+    readonly=readonly
+    required=true
+    value=model.karma
+    class=(if model.errors.karma 'error' '')
+    label=(t 'forms.flexberry-ember-demo-application-user-e.karma-caption')
+  }}
+  {{flexberry-validationmessage error=model.errors.karma pointing="pointing"}}
+</div>
+
+</form>
