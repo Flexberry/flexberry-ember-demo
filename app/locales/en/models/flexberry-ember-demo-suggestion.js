@@ -1,4 +1,8 @@
 export default {
+  validations: {
+    type: 'Type can\'t be blank',
+    author: 'Author can\'t be blank'
+  },
   projections: {
     SuggestionE: {
       address: {

@@ -1,4 +1,8 @@
 export default {
+  validations: {
+    author: 'Выберите автора',
+    suggestion: 'Выберите предложение'
+  },
   projections: {
     CommentE: {
       text: {

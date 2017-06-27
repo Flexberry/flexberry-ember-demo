@@ -1,4 +1,7 @@
 export default {
+  validations: {
+    name: 'Введите название'
+  },
   projections: {
     SuggestionTypeE: {
       name: {

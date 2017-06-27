@@ -1,4 +1,7 @@
 export default {
+  validations: {
+    name: 'Name can\'t be blank'
+  },
   projections: {
     LocalizationE: {
       name: {

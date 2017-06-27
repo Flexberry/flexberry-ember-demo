@@ -1,4 +1,9 @@
 export default {
+  validations: {
+    name: 'Name can\'t be blank',
+    login: 'Login can\'t be blank',
+    eMail: 'E Mail can\'t be blank'
+  },
   projections: {
     ApplicationUserE: {
       name: {

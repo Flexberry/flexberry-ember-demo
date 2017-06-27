@@ -1,4 +1,8 @@
 export default {
+  validations: {
+    type: 'Выберите тип предложения',
+    author: 'Выберите автора'
+  },
   projections: {
     SuggestionE: {
       address: {

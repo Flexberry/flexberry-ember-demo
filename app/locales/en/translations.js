@@ -49,7 +49,7 @@ Ember.$.extend(true, translations, {
 
   forms: {
     loading: {
-      'spinner-caption': 'Loading stuff, please have a cold beer...'
+      'spinner-caption': 'Loading ...'
     },
     index: {
       greeting: 'Welcome to ember-flexberry test stand!'

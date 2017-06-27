@@ -1,4 +1,9 @@
 export default {
+  validations: {
+    name: 'Введите имя',
+    login: 'Введите логин',
+    eMail: 'Введите E mail'
+  },
   projections: {
     ApplicationUserE: {
       name: {

@@ -1,4 +1,8 @@
 export default {
+  validations: {
+    applicationUser: 'Выберите пользователя приложения',
+    comment: 'Выберите комментарий'
+  },
   projections: {
     CommentVoteE: {
       voteType: {

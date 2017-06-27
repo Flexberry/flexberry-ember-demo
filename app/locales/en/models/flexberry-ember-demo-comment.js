@@ -1,4 +1,8 @@
 export default {
+  validations: {
+    author: 'Author can\'t be blank',
+    suggestion: 'Suggestion can\'t be blank'
+  },
   projections: {
     CommentE: {
       text: {
