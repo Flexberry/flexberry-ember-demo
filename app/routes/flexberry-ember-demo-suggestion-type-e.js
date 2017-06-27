@@ -3,5 +3,12 @@ import RedirectMixin from '../mixins/redirect-to-login-mixin';
 
 export default EditFormRoute.extend(RedirectMixin, {
   modelProjection: 'SuggestionTypeE',
-  modelName: 'flexberry-ember-demo-suggestion-type'
+  modelName: 'flexberry-ember-demo-suggestion-type',
+  developerUserSettings: {
+    localizedTypesGroupEdit: {
+      DEFAULT: {
+        columnWidths: [{ propName: 'OlvRowToolbar', fixed: true, width: 50 }]
+      }
+    }
+  }
 });

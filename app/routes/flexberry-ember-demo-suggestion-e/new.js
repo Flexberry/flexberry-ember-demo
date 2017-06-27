@@ -4,6 +4,23 @@ export default EditFormNewRoute.extend({
   modelProjection: 'SuggestionE',
   modelName: 'flexberry-ember-demo-suggestion',
   templateName: 'flexberry-ember-demo-suggestion-e',
+  developerUserSettings: {
+    commentsGroupEdit: {
+      DEFAULT: {
+        columnWidths: [{ propName: 'OlvRowToolbar', fixed: true, width: 50 }]
+      }
+    },
+    filesGroupEdit: {
+      DEFAULT: {
+        columnWidths: [{ propName: 'OlvRowToolbar', fixed: true, width: 50 }]
+      }
+    },
+    userVotesGroupEdit: {
+      DEFAULT: {
+        columnWidths: [{ propName: 'OlvRowToolbar', fixed: true, width: 50 }]
+      }
+    }
+  },
 
   /**
     A hook you can implement to convert the URL into the model for this route.

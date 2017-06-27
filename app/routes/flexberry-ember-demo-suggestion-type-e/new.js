@@ -4,4 +4,11 @@ export default EditFormNewRoute.extend({
   modelProjection: 'SuggestionTypeE',
   modelName: 'flexberry-ember-demo-suggestion-type',
   templateName: 'flexberry-ember-demo-suggestion-type-e',
+  developerUserSettings: {
+    localizedTypesGroupEdit: {
+      DEFAULT: {
+        columnWidths: [{ propName: 'OlvRowToolbar', fixed: true, width: 50 }]
+      }
+    }
+  },
 });
