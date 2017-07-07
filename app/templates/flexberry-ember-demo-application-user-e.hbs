@@ -20,16 +20,16 @@
   <div class="field">
     <div class="flexberry-edit-panel">
       {{#unless readonly}}
-        <button type="submit" class="ui positive button" {{action 'save'}}>
+        <button type="submit" class="ui button save-button" {{action 'save'}}>
           {{t "forms.edit-form.save-button-text"}}
         </button>
         {{#unless model.isNew}}
-          <button type="submit" class="ui negative button" {{action 'delete'}}>
+          <button type="submit" class="ui button save-del-button" {{action 'delete'}}>
             {{t "forms.edit-form.delete-button-text"}}
           </button>
         {{/unless}}
       {{/unless}}
-      <button type="submit" class="ui button" {{action 'close'}}>
+      <button type="submit" class="ui button close-button" {{action 'close'}}>
         {{t "forms.edit-form.close-button-text"}}
       </button>
     </div>
@@ -115,8 +115,8 @@
 <div class="field">
   <label>{{t 'forms.flexberry-ember-demo-application-user-e.activated-caption'}}</label>
   {{
-    flexberry-checkbox
-    readonly=readonly
+    flexberry-checkbox 
+    readonly=readonly 
     value=model.activated
   }}
   {{flexberry-validationmessage error=model.errors.activated pointing="pointing"}}
@@ -187,8 +187,8 @@
 <div class="field">
   <label>{{t 'forms.flexberry-ember-demo-application-user-e.vip-caption'}}</label>
   {{
-    flexberry-checkbox
-    readonly=readonly
+    flexberry-checkbox 
+    readonly=readonly 
     value=model.vip
   }}
   {{flexberry-validationmessage error=model.errors.vip pointing="pointing"}}

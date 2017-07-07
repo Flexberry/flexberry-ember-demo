@@ -94,7 +94,7 @@ export default EditMapRoute.extend(
           type: 'geojson',
           visibility: true,
           settings: `{"geojson":${JSON.stringify(features)},"coordsToLatLng":"function(coords) { return L.latLng(coords[0], coords[1]); }",` +
-          '"style":"function(feature) { return { opacity: 0.65 }; }","showOnMinimap":true,' +
+          '"style":"function(feature) { return { opacity: 0.65 }; }","showOnMinimap":false,' +
           '"onEachFeature":"function(feature, layer) { if (feature.properties && feature.properties.popupContent) ' +
           '{ layer.bindPopup(feature.properties.popupContent); } } "}',
           coordinateReferenceSystem: '{"code":"EPSG:3857","definition":null}'
