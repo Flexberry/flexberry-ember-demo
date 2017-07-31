@@ -4,7 +4,7 @@
 
 import Ember from 'ember';
 import EditMapRoute from 'ember-flexberry-gis/routes/edit-map';
-import MapRouteCswLoaderMixin from 'ember-flexberry-gis/mixins/map-route-csw-loader';
+import MapRouteCswLoaderMixin from 'ember-flexberry-gis-csw/mixins/map-route-csw-loader';
 import RedirectMixin from '../mixins/redirect-to-login-mixin';
 import moment from 'moment';
 import { Query } from 'ember-flexberry-data';
