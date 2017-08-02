@@ -42,7 +42,6 @@
     "ember-export-application-global": "^1.0.5",
     "ember-flexberry": "0.9.0-beta.15",
     "ember-flexberry-gis": "0.1.1",
-    "ember-flexberry-gis-csw": "0.1.1",
     "ember-inflector": "2.0.1",
     "ember-link-action": "0.0.34",
     "ember-load-initializers": "^0.5.1",
