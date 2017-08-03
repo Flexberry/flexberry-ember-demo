@@ -38,10 +38,10 @@ module.exports = function(defaults) {
   app.import('vendor/fonts/crim.ttf', { destDir: 'assets/fonts' });
   app.import('vendor/fonts/crim.woff', { destDir: 'assets/fonts' });
   app.import('vendor/fonts/crim.woff2', { destDir: 'assets/fonts' });
-  app.import('vendor/serviceImages/close.png', { destDir: 'assets/serviceImages' });
-  app.import('vendor/serviceImages/close-hover.png', { destDir: 'assets/serviceImages' });
-  app.import('vendor/serviceImages/plus.png', { destDir: 'assets/serviceImages' });
-  app.import('vendor/serviceImages/minus.png', { destDir: 'assets/serviceImages' });
+  app.import('vendor/serviceImages/close.png', { destDir: 'assets/themes/blue-sky/assets/images' });
+  app.import('vendor/serviceImages/close-hover.png', { destDir: 'assets/themes/blue-sky/assets/images' });
+  app.import('vendor/serviceImages/plus.png', { destDir: 'assets/themes/blue-sky/assets/images' });
+  app.import('vendor/serviceImages/minus.png', { destDir: 'assets/themes/blue-sky/assets/images' });
 
   // Use `app.import` to add additional libraries to the generated
   // output files.
