@@ -20,7 +20,7 @@
     "html2canvas": "master",
     "leaflet-export": "0.1.0",
     "leaflet-switch-scale-control": "0.1.0",
-    "Leaflet.zoomslider": "https://github.com/Flexberry/Leaflet.zoomslider.git#leaflet-1.0.1",
+    "leaflet.zoomslider": "https://github.com/Flexberry/Leaflet.zoomslider.git#leaflet-1.0.1",
     "leaflet-minimap": "3.4.0",
     "osmtogeojson": "2.2.12",
     "ows.js": "0.1.5",
