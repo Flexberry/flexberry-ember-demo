@@ -9,13 +9,18 @@ cache:
   directories:
     - node_modules
 
+dist: trusty
+
+addons:
+  chrome: stable
+
 before_install:
   - npm config set spin false
   - npm install -g npm@^2
+  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
 
 install:
   - npm install -g bower
-  - npm install -g phantomjs-prebuilt
   - npm install
   - bower install
 
